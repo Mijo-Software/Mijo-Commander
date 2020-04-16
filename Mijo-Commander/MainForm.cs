@@ -19,6 +19,8 @@ namespace Mijo_Commander
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1300:SpecifyMessageBoxOptions")]
     private void MainForm_Load(object sender, EventArgs e)
     {
+			menuStrip.RenderMode = ToolStripRenderMode.System;
+
 			try
 			{
 				if (Directory.Exists(Directory.GetCurrentDirectory()))
@@ -180,6 +182,7 @@ namespace Mijo_Commander
 		private void toolStripMenuItemRemoveBar_Click(object sender, EventArgs e)
 		{
 			toolStripSplitView.Visible = false;
+			toolStripMenuItemToolbarSplitView.Checked = false;
 		}
 
 		private void toolStripMenuItemExit_Click(object sender, EventArgs e)
@@ -238,22 +241,30 @@ namespace Mijo_Commander
 
 		private void toolStripButtonFileWindowGrid_Click(object sender, EventArgs e)
 		{
+			toolStripButtonFileWindowGrid.Checked = !toolStripButtonFileWindowGrid.Checked;
+			toolStripMenuItemViewFileWindowGrid.Checked = !toolStripMenuItemViewFileWindowGrid.Checked;
+			toolStripMenuItemFileWindowGrid.Checked = !toolStripMenuItemFileWindowGrid.Checked;
 			if (toolStripButtonFileWindowGrid.Checked)
 			{
 				listViewLeft.GridLines = true;
 				listViewRight.GridLines = true;
-				toolStripButtonFileWindowGrid.Image = Resources.fatcow_border_1;
+				toolStripButtonFileWindowGrid.Image = Resources.fatcow_border_inside;
+				toolStripMenuItemViewFileWindowGrid.Image = Resources.fatcow_border_inside;
 			}
 			else
 			{
 				listViewLeft.GridLines = false;
 				listViewRight.GridLines = false;
 				toolStripButtonFileWindowGrid.Image = Resources.fatcow_border_0;
+				toolStripMenuItemViewFileWindowGrid.Image = Resources.fatcow_border_0;
 			}
 		}
 
 		private void toolStripButtonFileWindowHeader_Click(object sender, EventArgs e)
 		{
+			toolStripButtonFileWindowHeader.Checked = !toolStripButtonFileWindowHeader.Checked;
+			toolStripMenuItemViewFileWindowHeader.Checked = !toolStripMenuItemViewFileWindowHeader.Checked;
+			toolStripMenuItemFileWindowHeader.Checked = !toolStripMenuItemFileWindowHeader.Checked;
 			if (toolStripButtonFileWindowHeader.Checked)
 			{
 				listViewLeft.HeaderStyle = ColumnHeaderStyle.Clickable;
@@ -264,6 +275,43 @@ namespace Mijo_Commander
 				listViewLeft.HeaderStyle = ColumnHeaderStyle.None;
 				listViewRight.HeaderStyle = ColumnHeaderStyle.None;
 			}
+		}
+
+		private void toolStripButtonFileWindowFullRowSelect_Click(object sender, EventArgs e)
+		{
+			toolStripButtonFileWindowFullRowSelect.Checked = !toolStripButtonFileWindowFullRowSelect.Checked;
+			toolStripMenuItemViewFileWindowFullRow.Checked = !toolStripMenuItemViewFileWindowFullRow.Checked;
+			toolStripMenuItemFileWindowFullRow.Checked = !toolStripMenuItemFileWindowFullRow.Checked;
+			if (toolStripButtonFileWindowFullRowSelect.Checked)
+			{
+				listViewLeft.FullRowSelect = true;
+				listViewRight.FullRowSelect = true;
+				toolStripButtonFileWindowFullRowSelect.Image = Resources.fatcow_table_select_row;
+			}
+			else
+			{
+				listViewLeft.FullRowSelect = false;
+				listViewRight.FullRowSelect = false;
+				toolStripButtonFileWindowFullRowSelect.Image = Resources.fatcow_table_select_cell;
+			}
+		}
+
+		private void toolStripMenuItemFileWindow_Click(object sender, EventArgs e)
+		{
+			if (toolStripFileWindow.Visible)
+			{
+				toolStripFileWindow.Visible = false;
+			}
+			else
+			{
+				toolStripFileWindow.Visible = true;
+			}
+		}
+
+		private void toolStripMenuItemFileWindowRemoveBar_Click(object sender, EventArgs e)
+		{
+			toolStripFileWindow.Visible = false;
+			toolStripMenuItemFileWindow.Checked = false;
 		}
   }
 }
