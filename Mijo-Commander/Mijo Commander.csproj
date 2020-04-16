@@ -227,6 +227,42 @@
   <ItemGroup>
     <None Include="Resources\fatcow-border-top.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fugue-table-select-row.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fatcow-table-select-cell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fatcow-table-select-row.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fugue-table-select-cell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fugue-border-inside.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fatcow-border-inside.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fatcow-table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fugue-table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fugue-palette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fatcow-color-swatch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fatcow-palette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fugue-color-swatch.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

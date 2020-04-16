@@ -62,322 +62,406 @@ namespace MijoCommander.Properties {
         
         internal static System.Drawing.Bitmap fatcow_border_0 {
             get {
-                object obj = ResourceManager.GetObject("fatcow-border-0", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_border_0", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fatcow_border_1 {
             get {
-                object obj = ResourceManager.GetObject("fatcow-border-1", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_border_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fatcow_border_2 {
             get {
-                object obj = ResourceManager.GetObject("fatcow-border-2", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_border_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap fatcow_border_inside {
+            get {
+                object obj = ResourceManager.GetObject("fatcow_border_inside", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fatcow_border_top {
             get {
-                object obj = ResourceManager.GetObject("fatcow-border-top", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_border_top", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fatcow_cancel {
             get {
-                object obj = ResourceManager.GetObject("fatcow-cancel", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_cancel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap fatcow_color_swatch {
+            get {
+                object obj = ResourceManager.GetObject("fatcow_color_swatch", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fatcow_disk {
             get {
-                object obj = ResourceManager.GetObject("fatcow-disk", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_disk", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fatcow_door {
             get {
-                object obj = ResourceManager.GetObject("fatcow-door", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_door", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fatcow_gear {
             get {
-                object obj = ResourceManager.GetObject("fatcow-gear", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_gear", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fatcow_help {
             get {
-                object obj = ResourceManager.GetObject("fatcow-help", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_help", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fatcow_information {
             get {
-                object obj = ResourceManager.GetObject("fatcow-information", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_information", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap fatcow_palette {
+            get {
+                object obj = ResourceManager.GetObject("fatcow_palette", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fatcow_split_panel {
             get {
-                object obj = ResourceManager.GetObject("fatcow-split-panel", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_split_panel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fatcow_split_panel_vertical {
             get {
-                object obj = ResourceManager.GetObject("fatcow-split-panel-vertical", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_split_panel_vertical", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap fatcow_table {
+            get {
+                object obj = ResourceManager.GetObject("fatcow_table", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap fatcow_table_select_cell {
+            get {
+                object obj = ResourceManager.GetObject("fatcow_table_select_cell", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap fatcow_table_select_row {
+            get {
+                object obj = ResourceManager.GetObject("fatcow_table_select_row", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fatcow_tick {
             get {
-                object obj = ResourceManager.GetObject("fatcow-tick", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_tick", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fatcow_tick_button {
             get {
-                object obj = ResourceManager.GetObject("fatcow-tick-button", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_tick_button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fatcow_toolbar {
             get {
-                object obj = ResourceManager.GetObject("fatcow-toolbar", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_toolbar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fatcow_toolbar_add {
             get {
-                object obj = ResourceManager.GetObject("fatcow-toolbar-add", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_toolbar_add", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fatcow_toolbar_delete {
             get {
-                object obj = ResourceManager.GetObject("fatcow-toolbar-delete", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_toolbar_delete", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fatcow_view_left_minus {
             get {
-                object obj = ResourceManager.GetObject("fatcow-view-left-minus", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_view_left_minus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fatcow_view_left_plus {
             get {
-                object obj = ResourceManager.GetObject("fatcow-view-left-plus", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_view_left_plus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fatcow_view_no_collapse {
             get {
-                object obj = ResourceManager.GetObject("fatcow-view-no-collapse", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_view_no_collapse", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fatcow_view_right_minus {
             get {
-                object obj = ResourceManager.GetObject("fatcow-view-right-minus", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_view_right_minus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fatcow_view_right_plus {
             get {
-                object obj = ResourceManager.GetObject("fatcow-view-right-plus", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_view_right_plus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fatcow_wrench {
             get {
-                object obj = ResourceManager.GetObject("fatcow-wrench", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_wrench", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fugue_border_0 {
             get {
-                object obj = ResourceManager.GetObject("fugue-border-0", resourceCulture);
+                object obj = ResourceManager.GetObject("fugue_border_0", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fugue_border_1 {
             get {
-                object obj = ResourceManager.GetObject("fugue-border-1", resourceCulture);
+                object obj = ResourceManager.GetObject("fugue_border_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fugue_border_2 {
             get {
-                object obj = ResourceManager.GetObject("fugue-border-2", resourceCulture);
+                object obj = ResourceManager.GetObject("fugue_border_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap fugue_border_inside {
+            get {
+                object obj = ResourceManager.GetObject("fugue_border_inside", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fugue_border_top {
             get {
-                object obj = ResourceManager.GetObject("fugue-border-top", resourceCulture);
+                object obj = ResourceManager.GetObject("fugue_border_top", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fugue_cancel {
             get {
-                object obj = ResourceManager.GetObject("fugue-cancel", resourceCulture);
+                object obj = ResourceManager.GetObject("fugue_cancel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap fugue_color_swatch {
+            get {
+                object obj = ResourceManager.GetObject("fugue_color_swatch", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fugue_disk {
             get {
-                object obj = ResourceManager.GetObject("fugue-disk", resourceCulture);
+                object obj = ResourceManager.GetObject("fugue_disk", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fugue_door {
             get {
-                object obj = ResourceManager.GetObject("fugue-door", resourceCulture);
+                object obj = ResourceManager.GetObject("fugue_door", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fugue_gear {
             get {
-                object obj = ResourceManager.GetObject("fugue-gear", resourceCulture);
+                object obj = ResourceManager.GetObject("fugue_gear", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fugue_help {
             get {
-                object obj = ResourceManager.GetObject("fugue-help", resourceCulture);
+                object obj = ResourceManager.GetObject("fugue_help", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fugue_information {
             get {
-                object obj = ResourceManager.GetObject("fugue-information", resourceCulture);
+                object obj = ResourceManager.GetObject("fugue_information", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap fugue_palette {
+            get {
+                object obj = ResourceManager.GetObject("fugue_palette", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fugue_split_panel {
             get {
-                object obj = ResourceManager.GetObject("fugue-split-panel", resourceCulture);
+                object obj = ResourceManager.GetObject("fugue_split_panel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fugue_split_panel_vertical {
             get {
-                object obj = ResourceManager.GetObject("fugue-split-panel-vertical", resourceCulture);
+                object obj = ResourceManager.GetObject("fugue_split_panel_vertical", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap fugue_table {
+            get {
+                object obj = ResourceManager.GetObject("fugue_table", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap fugue_table_select_cell {
+            get {
+                object obj = ResourceManager.GetObject("fugue_table_select_cell", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap fugue_table_select_row {
+            get {
+                object obj = ResourceManager.GetObject("fugue_table_select_row", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fugue_tick {
             get {
-                object obj = ResourceManager.GetObject("fugue-tick", resourceCulture);
+                object obj = ResourceManager.GetObject("fugue_tick", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fugue_tick_button {
             get {
-                object obj = ResourceManager.GetObject("fugue-tick-button", resourceCulture);
+                object obj = ResourceManager.GetObject("fugue_tick_button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fugue_toolbar {
             get {
-                object obj = ResourceManager.GetObject("fugue-toolbar", resourceCulture);
+                object obj = ResourceManager.GetObject("fugue_toolbar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fugue_toolbar_add {
             get {
-                object obj = ResourceManager.GetObject("fugue-toolbar-add", resourceCulture);
+                object obj = ResourceManager.GetObject("fugue_toolbar_add", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fugue_toolbar_delete {
             get {
-                object obj = ResourceManager.GetObject("fugue-toolbar-delete", resourceCulture);
+                object obj = ResourceManager.GetObject("fugue_toolbar_delete", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fugue_view_left_minus {
             get {
-                object obj = ResourceManager.GetObject("fugue-view-left-minus", resourceCulture);
+                object obj = ResourceManager.GetObject("fugue_view_left_minus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fugue_view_left_plus {
             get {
-                object obj = ResourceManager.GetObject("fugue-view-left-plus", resourceCulture);
+                object obj = ResourceManager.GetObject("fugue_view_left_plus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fugue_view_no_collapse {
             get {
-                object obj = ResourceManager.GetObject("fugue-view-no-collapse", resourceCulture);
+                object obj = ResourceManager.GetObject("fugue_view_no_collapse", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fugue_view_right_minus {
             get {
-                object obj = ResourceManager.GetObject("fugue-view-right-minus", resourceCulture);
+                object obj = ResourceManager.GetObject("fugue_view_right_minus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fugue_view_right_plus {
             get {
-                object obj = ResourceManager.GetObject("fugue-view-right-plus", resourceCulture);
+                object obj = ResourceManager.GetObject("fugue_view_right_plus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap fugue_wrench {
             get {
-                object obj = ResourceManager.GetObject("fugue-wrench", resourceCulture);
+                object obj = ResourceManager.GetObject("fugue_wrench", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

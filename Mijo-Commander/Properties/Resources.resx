@@ -118,148 +118,184 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="fugue-cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fugue-cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fatcow_disk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow-disk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fugue-gear" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fugue-gear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fugue_tick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue-tick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fatcow-split-panel-vertical" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fatcow-split-panel-vertical.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fatcow_tick_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow-tick-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fugue-door" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fugue-door1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fatcow_help" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow-help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fugue-information" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fugue-information.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fugue-toolbar-add" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fugue-toolbar-add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fugue-wrench" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fugue-wrench.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fatcow-gear" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fatcow-gear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fatcow-view-no-collapse" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fatcow-view-no-collapse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fugue-toolbar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fugue-toolbar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fatcow-view-left-minus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fatcow-view-left-minus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fugue-tick-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fugue-tick-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fugue-border-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fugue-border-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fatcow-toolbar-add" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fatcow-toolbar-add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fugue-split-panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fugue-split-panel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fatcow-view-right-minus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fatcow-view-right-minus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fugue-view-right-minus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fugue-view-right-minus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fatcow-split-panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fatcow-split-panel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fatcow-view-right-plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fatcow_view_right_plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fatcow-view-right-plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fugue-view-right-plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fugue-view-right-plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fugue_border_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue-border-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fatcow-cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fatcow-cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fatcow_toolbar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow-toolbar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fatcow-border-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fatcow-border-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fugue_view_no_collapse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue-view-no-collapse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fugue-toolbar-delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fugue-toolbar-delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fugue_toolbar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue-toolbar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fatcow-toolbar-delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fatcow-toolbar-delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fugue_wrench" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue-wrench.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fatcow-door" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fatcow_information" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow-information.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_toolbar_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue-toolbar-add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_table" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow-table.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_gear" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue-gear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_view_right_minus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue-view-right-minus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_view_left_minus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow-view-left-minus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_border_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow-border-0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_border_inside" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow-border-inside.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_door" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fatcow-door1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fatcow-information" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fatcow-information.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fugue_border_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue-border-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_toolbar_delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue-toolbar-delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_view_no_collapse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow-view-no-collapse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_disk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue-disk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_border_inside" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue-border-inside.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_table_select_row" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue-table-select-row.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_border_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow-border-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_view_right_plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue-view-right-plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_table_select_cell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue-table-select-cell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_view_left_plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow-view-left-plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="msgError" xml:space="preserve">
     <value>Error</value>
   </data>
-  <data name="fugue-tick" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fugue-tick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fatcow_split_panel_vertical" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow-split-panel-vertical.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fatcow-toolbar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fatcow-toolbar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fugue_door" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue-door1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fatcow-tick" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fatcow-tick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fugue_border_top" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue-border-top.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fugue-help" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fugue_information" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue-information.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue-cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_help" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fugue-help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fatcow-border-0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fatcow-border-0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fatcow-disk" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fatcow-disk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fatcow-tick-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fatcow-tick-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fugue-view-left-plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fugue-view-left-plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fugue-border-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fugue-border-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fugue-disk" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fugue-disk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="msgFolderNotExist" xml:space="preserve">
     <value>Folder doesn't exist.</value>
   </data>
-  <data name="fatcow-help" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fatcow-help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fugue-view-no-collapse" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fugue-view-no-collapse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fugue-border-0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fugue-border-0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fatcow-view-left-plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fatcow-view-left-plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fugue-view-left-minus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fugue_view_left_minus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fugue-view-left-minus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fugue-split-panel-vertical" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fugue_split_panel_vertical" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fugue-split-panel-vertical.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fatcow-border-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fatcow-border-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fatcow_view_right_minus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow-view-right-minus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fatcow-wrench" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fatcow_split_panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow-split-panel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_wrench" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fatcow-wrench.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fugue-border-top" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fugue-border-top.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fugue_border_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue-border-0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fatcow-border-top" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fatcow_toolbar_delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow-toolbar-delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_table" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue-table.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_table_select_cell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow-table-select-cell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_tick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow-tick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_table_select_row" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow-table-select-row.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_border_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow-border-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_gear" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow-gear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_tick_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue-tick-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_border_top" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fatcow-border-top.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow-cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_toolbar_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow-toolbar-add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_view_left_plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue-view-left-plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_split_panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue-split-panel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_palette" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue-palette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_color_swatch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow-color-swatch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_palette" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow-palette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_color_swatch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue-color-swatch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
