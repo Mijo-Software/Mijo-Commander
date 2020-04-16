@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
 			this.components = new System.ComponentModel.Container();
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.menuStrip = new System.Windows.Forms.MenuStrip();
 			this.toolStripMenuItemFile = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItemExit = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItemView = new System.Windows.Forms.ToolStripMenuItem();
+			this.splitViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItemViewLeftCollapse = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItemViewRightCollapse = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItemViewNoCollapse = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,37 +44,46 @@
 			this.toolStripSeparatorView2 = new System.Windows.Forms.ToolStripSeparator();
 			this.toolStripMenuItemViewHorizontal = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItemViewVertical = new System.Windows.Forms.ToolStripMenuItem();
+			this.enabledisableSymbolBarsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripMenuItemToolbarSplitView = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripOperations = new System.Windows.Forms.ToolStrip();
 			this.toolStripButtonOptions = new System.Windows.Forms.ToolStripButton();
 			this.statusStrip = new System.Windows.Forms.StatusStrip();
 			this.splitContainer = new System.Windows.Forms.SplitContainer();
 			this.listViewLeft = new System.Windows.Forms.ListView();
+			this.columnHeaderLeftName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.columnHeaderLeftFilesize = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.listViewRight = new System.Windows.Forms.ListView();
+			this.columnHeaderRightName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.columnHeaderRightFilesize = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.toolStripContainer = new System.Windows.Forms.ToolStripContainer();
-			this.toolStripSplitterView = new System.Windows.Forms.ToolStrip();
-			this.contextMenuStripSplitterView = new System.Windows.Forms.ContextMenuStrip(this.components);
-			this.toolStripMenuItemRemoveBar = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-			this.toolStripMenuItemSplitterViewLeftCollapse = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripMenuItemSplitterViewRightCollapse = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripMenuItemSplitterViewNoCollapse = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-			this.toolStripMenuItemSplitterViewBorder0 = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripMenuItemSplitterViewBorder1 = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripMenuItemSplitterViewBorder2 = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-			this.toolStripMenuItemSplitterViewHorizontal = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripMenuItemSplitterViewVertical = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripButtonSplitterViewLeftCollapse = new System.Windows.Forms.ToolStripButton();
-			this.toolStripButtonSplitterViewRightCollapse = new System.Windows.Forms.ToolStripButton();
-			this.toolStripButtonSplitterViewNoCollapse = new System.Windows.Forms.ToolStripButton();
-			this.toolStripSeparatorSplitterView1 = new System.Windows.Forms.ToolStripSeparator();
-			this.toolStripButtonSplitterViewBorder0 = new System.Windows.Forms.ToolStripButton();
-			this.toolStripButtonSplitterViewBorder1 = new System.Windows.Forms.ToolStripButton();
-			this.toolStripButtonSplitterViewBorder2 = new System.Windows.Forms.ToolStripButton();
-			this.toolStripSeparatorSplitterView2 = new System.Windows.Forms.ToolStripSeparator();
-			this.toolStripButtonSplitterViewHorizontal = new System.Windows.Forms.ToolStripButton();
-			this.toolStripButtonSplitterViewVertical = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSplitView = new System.Windows.Forms.ToolStrip();
+			this.contextMenuStripSplitView = new System.Windows.Forms.ContextMenuStrip(this.components);
+			this.toolStripMenuItemSplitViewRemoveBar = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparatorSplitViewContext1 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripMenuItemSplitViewLeftCollapse = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripMenuItemSplitViewRightCollapse = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripMenuItemSplitViewNoCollapse = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparatorSplitViewContext2 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripMenuItemSplitViewBorder0 = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripMenuItemSplitViewBorder1 = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripMenuItemSplitViewBorder2 = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparatorSplitViewContext3 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripMenuItemSplitViewHorizontal = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripMenuItemSplitViewVertical = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripButtonSplitViewLeftCollapse = new System.Windows.Forms.ToolStripButton();
+			this.toolStripButtonSplitViewRightCollapse = new System.Windows.Forms.ToolStripButton();
+			this.toolStripButtonSplitViewNoCollapse = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparatorSplitView1 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripButtonSplitViewBorder0 = new System.Windows.Forms.ToolStripButton();
+			this.toolStripButtonSplitViewBorder1 = new System.Windows.Forms.ToolStripButton();
+			this.toolStripButtonSplitViewBorder2 = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparatorSplitView2 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripButtonSplitViewHorizontal = new System.Windows.Forms.ToolStripButton();
+			this.toolStripButtonSplitViewVertical = new System.Windows.Forms.ToolStripButton();
+			this.toolStripButtonFileWindow = new System.Windows.Forms.ToolStrip();
+			this.toolStripButtonFileWindowGrid = new System.Windows.Forms.ToolStripButton();
+			this.toolStripButtonFileWindowHeader = new System.Windows.Forms.ToolStripButton();
 			this.toolTip = new System.Windows.Forms.ToolTip(this.components);
 			this.menuStrip.SuspendLayout();
 			this.toolStripOperations.SuspendLayout();
@@ -86,8 +95,9 @@
 			this.toolStripContainer.ContentPanel.SuspendLayout();
 			this.toolStripContainer.TopToolStripPanel.SuspendLayout();
 			this.toolStripContainer.SuspendLayout();
-			this.toolStripSplitterView.SuspendLayout();
-			this.contextMenuStripSplitterView.SuspendLayout();
+			this.toolStripSplitView.SuspendLayout();
+			this.contextMenuStripSplitView.SuspendLayout();
+			this.toolStripButtonFileWindow.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// menuStrip
@@ -98,7 +108,7 @@
 			this.menuStrip.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip.Name = "menuStrip";
 			this.menuStrip.ShowItemToolTips = true;
-			this.menuStrip.Size = new System.Drawing.Size(649, 24);
+			this.menuStrip.Size = new System.Drawing.Size(641, 24);
 			this.menuStrip.TabIndex = 0;
 			this.menuStrip.TabStop = true;
 			this.menuStrip.Text = "main menu";
@@ -124,6 +134,15 @@
 			// toolStripMenuItemView
 			// 
 			this.toolStripMenuItemView.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.splitViewToolStripMenuItem,
+            this.enabledisableSymbolBarsToolStripMenuItem});
+			this.toolStripMenuItemView.Name = "toolStripMenuItemView";
+			this.toolStripMenuItemView.Size = new System.Drawing.Size(41, 20);
+			this.toolStripMenuItemView.Text = "&View";
+			// 
+			// splitViewToolStripMenuItem
+			// 
+			this.splitViewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItemViewLeftCollapse,
             this.toolStripMenuItemViewRightCollapse,
             this.toolStripMenuItemViewNoCollapse,
@@ -134,35 +153,36 @@
             this.toolStripSeparatorView2,
             this.toolStripMenuItemViewHorizontal,
             this.toolStripMenuItemViewVertical});
-			this.toolStripMenuItemView.Name = "toolStripMenuItemView";
-			this.toolStripMenuItemView.Size = new System.Drawing.Size(41, 20);
-			this.toolStripMenuItemView.Text = "&View";
+			this.splitViewToolStripMenuItem.Image = global::MijoCommander.Properties.Resources.fatcow_split_panel;
+			this.splitViewToolStripMenuItem.Name = "splitViewToolStripMenuItem";
+			this.splitViewToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+			this.splitViewToolStripMenuItem.Text = "Split view";
 			// 
 			// toolStripMenuItemViewLeftCollapse
 			// 
 			this.toolStripMenuItemViewLeftCollapse.AutoToolTip = true;
+			this.toolStripMenuItemViewLeftCollapse.Image = global::MijoCommander.Properties.Resources.fatcow_view_left_minus;
 			this.toolStripMenuItemViewLeftCollapse.Name = "toolStripMenuItemViewLeftCollapse";
 			this.toolStripMenuItemViewLeftCollapse.Size = new System.Drawing.Size(165, 22);
 			this.toolStripMenuItemViewLeftCollapse.Text = "Left view collapse";
-			this.toolStripMenuItemViewLeftCollapse.Click += new System.EventHandler(this.toolStripButtonSplitterViewLeftCollapse_Click);
 			// 
 			// toolStripMenuItemViewRightCollapse
 			// 
 			this.toolStripMenuItemViewRightCollapse.AutoToolTip = true;
+			this.toolStripMenuItemViewRightCollapse.Image = global::MijoCommander.Properties.Resources.fatcow_view_right_minus;
 			this.toolStripMenuItemViewRightCollapse.Name = "toolStripMenuItemViewRightCollapse";
 			this.toolStripMenuItemViewRightCollapse.Size = new System.Drawing.Size(165, 22);
 			this.toolStripMenuItemViewRightCollapse.Text = "Right view collapse";
-			this.toolStripMenuItemViewRightCollapse.Click += new System.EventHandler(this.toolStripButtonSplitterViewRightCollapse_Click);
 			// 
 			// toolStripMenuItemViewNoCollapse
 			// 
 			this.toolStripMenuItemViewNoCollapse.AutoToolTip = true;
 			this.toolStripMenuItemViewNoCollapse.Checked = true;
 			this.toolStripMenuItemViewNoCollapse.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.toolStripMenuItemViewNoCollapse.Image = global::MijoCommander.Properties.Resources.fatcow_view_no_collapse;
 			this.toolStripMenuItemViewNoCollapse.Name = "toolStripMenuItemViewNoCollapse";
 			this.toolStripMenuItemViewNoCollapse.Size = new System.Drawing.Size(165, 22);
 			this.toolStripMenuItemViewNoCollapse.Text = "No collapse";
-			this.toolStripMenuItemViewNoCollapse.Click += new System.EventHandler(this.toolStripButtonSplitterViewNoCollapse_Click);
 			// 
 			// toolStripSeparatorView1
 			// 
@@ -178,7 +198,6 @@
 			this.toolStripMenuItemViewBorder0.Name = "toolStripMenuItemViewBorder0";
 			this.toolStripMenuItemViewBorder0.Size = new System.Drawing.Size(165, 22);
 			this.toolStripMenuItemViewBorder0.Text = "No border";
-			this.toolStripMenuItemViewBorder0.Click += new System.EventHandler(this.toolStripButtonSplitterViewBorder0_Click);
 			// 
 			// toolStripMenuItemViewBorder1
 			// 
@@ -187,7 +206,6 @@
 			this.toolStripMenuItemViewBorder1.Name = "toolStripMenuItemViewBorder1";
 			this.toolStripMenuItemViewBorder1.Size = new System.Drawing.Size(165, 22);
 			this.toolStripMenuItemViewBorder1.Text = "Thin border";
-			this.toolStripMenuItemViewBorder1.Click += new System.EventHandler(this.toolStripButtonSplitterViewBorder1_Click);
 			// 
 			// toolStripMenuItemViewBorder2
 			// 
@@ -196,7 +214,6 @@
 			this.toolStripMenuItemViewBorder2.Name = "toolStripMenuItemViewBorder2";
 			this.toolStripMenuItemViewBorder2.Size = new System.Drawing.Size(165, 22);
 			this.toolStripMenuItemViewBorder2.Text = "3d border";
-			this.toolStripMenuItemViewBorder2.Click += new System.EventHandler(this.toolStripButtonSplitterViewBorder2_Click);
 			// 
 			// toolStripSeparatorView2
 			// 
@@ -212,7 +229,6 @@
 			this.toolStripMenuItemViewHorizontal.Name = "toolStripMenuItemViewHorizontal";
 			this.toolStripMenuItemViewHorizontal.Size = new System.Drawing.Size(165, 22);
 			this.toolStripMenuItemViewHorizontal.Text = "View horizontal";
-			this.toolStripMenuItemViewHorizontal.Click += new System.EventHandler(this.toolStripButtonSplitterViewHorizontal_Click);
 			// 
 			// toolStripMenuItemViewVertical
 			// 
@@ -221,7 +237,26 @@
 			this.toolStripMenuItemViewVertical.Name = "toolStripMenuItemViewVertical";
 			this.toolStripMenuItemViewVertical.Size = new System.Drawing.Size(165, 22);
 			this.toolStripMenuItemViewVertical.Text = "View vertical";
-			this.toolStripMenuItemViewVertical.Click += new System.EventHandler(this.toolStripButtonSplitterViewVertical_Click);
+			// 
+			// enabledisableSymbolBarsToolStripMenuItem
+			// 
+			this.enabledisableSymbolBarsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemToolbarSplitView});
+			this.enabledisableSymbolBarsToolStripMenuItem.Image = global::MijoCommander.Properties.Resources.fatcow_toolbar;
+			this.enabledisableSymbolBarsToolStripMenuItem.Name = "enabledisableSymbolBarsToolStripMenuItem";
+			this.enabledisableSymbolBarsToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+			this.enabledisableSymbolBarsToolStripMenuItem.Text = "Toolbar visibility";
+			// 
+			// toolStripMenuItemToolbarSplitView
+			// 
+			this.toolStripMenuItemToolbarSplitView.AutoToolTip = true;
+			this.toolStripMenuItemToolbarSplitView.Checked = true;
+			this.toolStripMenuItemToolbarSplitView.CheckOnClick = true;
+			this.toolStripMenuItemToolbarSplitView.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.toolStripMenuItemToolbarSplitView.Name = "toolStripMenuItemToolbarSplitView";
+			this.toolStripMenuItemToolbarSplitView.Size = new System.Drawing.Size(119, 22);
+			this.toolStripMenuItemToolbarSplitView.Text = "Split view";
+			this.toolStripMenuItemToolbarSplitView.Click += new System.EventHandler(this.toolStripMenuItemToolbarSplitView_Click);
 			// 
 			// toolStripOperations
 			// 
@@ -251,7 +286,7 @@
 			this.statusStrip.Location = new System.Drawing.Point(0, 0);
 			this.statusStrip.Name = "statusStrip";
 			this.statusStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
-			this.statusStrip.Size = new System.Drawing.Size(649, 22);
+			this.statusStrip.Size = new System.Drawing.Size(641, 22);
 			this.statusStrip.TabIndex = 3;
 			this.statusStrip.Text = "status bar";
 			// 
@@ -268,27 +303,73 @@
 			// splitContainer.Panel2
 			// 
 			this.splitContainer.Panel2.Controls.Add(this.listViewRight);
-			this.splitContainer.Size = new System.Drawing.Size(649, 428);
-			this.splitContainer.SplitterDistance = 320;
+			this.splitContainer.Size = new System.Drawing.Size(641, 420);
+			this.splitContainer.SplitterDistance = 316;
 			this.splitContainer.TabIndex = 0;
+			this.splitContainer.SplitterMoving += new System.Windows.Forms.SplitterCancelEventHandler(this.splitContainer_SplitterMoving);
+			this.splitContainer.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitContainer_SplitterMoved);
 			// 
 			// listViewLeft
 			// 
+			this.listViewLeft.Activation = System.Windows.Forms.ItemActivation.OneClick;
+			this.listViewLeft.AllowColumnReorder = true;
+			this.listViewLeft.AllowDrop = true;
+			this.listViewLeft.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeaderLeftName,
+            this.columnHeaderLeftFilesize});
 			this.listViewLeft.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.listViewLeft.FullRowSelect = true;
+			this.listViewLeft.LabelEdit = true;
 			this.listViewLeft.Location = new System.Drawing.Point(0, 0);
 			this.listViewLeft.Name = "listViewLeft";
-			this.listViewLeft.Size = new System.Drawing.Size(320, 428);
+			this.listViewLeft.ShowItemToolTips = true;
+			this.listViewLeft.Size = new System.Drawing.Size(316, 420);
 			this.listViewLeft.TabIndex = 1;
 			this.listViewLeft.UseCompatibleStateImageBehavior = false;
+			this.listViewLeft.View = System.Windows.Forms.View.Details;
+			this.listViewLeft.Enter += new System.EventHandler(this.listViewLeft_Enter);
+			this.listViewLeft.Leave += new System.EventHandler(this.listViewLeft_Leave);
+			// 
+			// columnHeaderLeftName
+			// 
+			this.columnHeaderLeftName.Text = "Name";
+			this.columnHeaderLeftName.Width = 150;
+			// 
+			// columnHeaderLeftFilesize
+			// 
+			this.columnHeaderLeftFilesize.Text = "File size";
+			this.columnHeaderLeftFilesize.Width = 100;
 			// 
 			// listViewRight
 			// 
+			this.listViewRight.Activation = System.Windows.Forms.ItemActivation.OneClick;
+			this.listViewRight.AllowColumnReorder = true;
+			this.listViewRight.AllowDrop = true;
+			this.listViewRight.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeaderRightName,
+            this.columnHeaderRightFilesize});
 			this.listViewRight.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.listViewRight.FullRowSelect = true;
+			this.listViewRight.LabelEdit = true;
 			this.listViewRight.Location = new System.Drawing.Point(0, 0);
 			this.listViewRight.Name = "listViewRight";
-			this.listViewRight.Size = new System.Drawing.Size(325, 428);
+			this.listViewRight.ShowItemToolTips = true;
+			this.listViewRight.Size = new System.Drawing.Size(321, 420);
 			this.listViewRight.TabIndex = 2;
 			this.listViewRight.UseCompatibleStateImageBehavior = false;
+			this.listViewRight.View = System.Windows.Forms.View.Details;
+			this.listViewRight.Enter += new System.EventHandler(this.listViewRight_Enter);
+			this.listViewRight.Leave += new System.EventHandler(this.listViewRight_Leave);
+			// 
+			// columnHeaderRightName
+			// 
+			this.columnHeaderRightName.Text = "Name";
+			this.columnHeaderRightName.Width = 150;
+			// 
+			// columnHeaderRightFilesize
+			// 
+			this.columnHeaderRightFilesize.Text = "File size";
+			this.columnHeaderRightFilesize.Width = 100;
 			// 
 			// toolStripContainer
 			// 
@@ -300,252 +381,295 @@
 			// toolStripContainer.ContentPanel
 			// 
 			this.toolStripContainer.ContentPanel.Controls.Add(this.splitContainer);
-			this.toolStripContainer.ContentPanel.Size = new System.Drawing.Size(649, 428);
+			this.toolStripContainer.ContentPanel.Size = new System.Drawing.Size(641, 420);
 			this.toolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.toolStripContainer.Location = new System.Drawing.Point(0, 24);
 			this.toolStripContainer.Name = "toolStripContainer";
-			this.toolStripContainer.Size = new System.Drawing.Size(649, 475);
+			this.toolStripContainer.Size = new System.Drawing.Size(641, 467);
 			this.toolStripContainer.TabIndex = 4;
 			this.toolStripContainer.Text = "toolStripContainer1";
 			// 
 			// toolStripContainer.TopToolStripPanel
 			// 
 			this.toolStripContainer.TopToolStripPanel.Controls.Add(this.toolStripOperations);
-			this.toolStripContainer.TopToolStripPanel.Controls.Add(this.toolStripSplitterView);
+			this.toolStripContainer.TopToolStripPanel.Controls.Add(this.toolStripSplitView);
+			this.toolStripContainer.TopToolStripPanel.Controls.Add(this.toolStripButtonFileWindow);
 			// 
-			// toolStripSplitterView
+			// toolStripSplitView
 			// 
-			this.toolStripSplitterView.AllowItemReorder = true;
-			this.toolStripSplitterView.ContextMenuStrip = this.contextMenuStripSplitterView;
-			this.toolStripSplitterView.Dock = System.Windows.Forms.DockStyle.None;
-			this.toolStripSplitterView.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButtonSplitterViewLeftCollapse,
-            this.toolStripButtonSplitterViewRightCollapse,
-            this.toolStripButtonSplitterViewNoCollapse,
-            this.toolStripSeparatorSplitterView1,
-            this.toolStripButtonSplitterViewBorder0,
-            this.toolStripButtonSplitterViewBorder1,
-            this.toolStripButtonSplitterViewBorder2,
-            this.toolStripSeparatorSplitterView2,
-            this.toolStripButtonSplitterViewHorizontal,
-            this.toolStripButtonSplitterViewVertical});
-			this.toolStripSplitterView.Location = new System.Drawing.Point(79, 0);
-			this.toolStripSplitterView.Name = "toolStripSplitterView";
-			this.toolStripSplitterView.Size = new System.Drawing.Size(208, 25);
-			this.toolStripSplitterView.TabIndex = 2;
-			this.toolStripSplitterView.TabStop = true;
+			this.toolStripSplitView.AllowItemReorder = true;
+			this.toolStripSplitView.ContextMenuStrip = this.contextMenuStripSplitView;
+			this.toolStripSplitView.Dock = System.Windows.Forms.DockStyle.None;
+			this.toolStripSplitView.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButtonSplitViewLeftCollapse,
+            this.toolStripButtonSplitViewRightCollapse,
+            this.toolStripButtonSplitViewNoCollapse,
+            this.toolStripSeparatorSplitView1,
+            this.toolStripButtonSplitViewBorder0,
+            this.toolStripButtonSplitViewBorder1,
+            this.toolStripButtonSplitViewBorder2,
+            this.toolStripSeparatorSplitView2,
+            this.toolStripButtonSplitViewHorizontal,
+            this.toolStripButtonSplitViewVertical});
+			this.toolStripSplitView.Location = new System.Drawing.Point(168, 0);
+			this.toolStripSplitView.Name = "toolStripSplitView";
+			this.toolStripSplitView.Size = new System.Drawing.Size(208, 25);
+			this.toolStripSplitView.TabIndex = 2;
+			this.toolStripSplitView.TabStop = true;
+			this.toolStripSplitView.Text = "toolStripSplitView";
 			// 
-			// contextMenuStripSplitterView
+			// contextMenuStripSplitView
 			// 
-			this.contextMenuStripSplitterView.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemRemoveBar,
-            this.toolStripSeparator1,
-            this.toolStripMenuItemSplitterViewLeftCollapse,
-            this.toolStripMenuItemSplitterViewRightCollapse,
-            this.toolStripMenuItemSplitterViewNoCollapse,
-            this.toolStripSeparator2,
-            this.toolStripMenuItemSplitterViewBorder0,
-            this.toolStripMenuItemSplitterViewBorder1,
-            this.toolStripMenuItemSplitterViewBorder2,
-            this.toolStripSeparator3,
-            this.toolStripMenuItemSplitterViewHorizontal,
-            this.toolStripMenuItemSplitterViewVertical});
-			this.contextMenuStripSplitterView.Name = "contextMenuStripSplitterView";
-			this.contextMenuStripSplitterView.Size = new System.Drawing.Size(166, 220);
-			this.contextMenuStripSplitterView.TabStop = true;
-			this.contextMenuStripSplitterView.Text = "contextMenuStripSplitterView";
+			this.contextMenuStripSplitView.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemSplitViewRemoveBar,
+            this.toolStripSeparatorSplitViewContext1,
+            this.toolStripMenuItemSplitViewLeftCollapse,
+            this.toolStripMenuItemSplitViewRightCollapse,
+            this.toolStripMenuItemSplitViewNoCollapse,
+            this.toolStripSeparatorSplitViewContext2,
+            this.toolStripMenuItemSplitViewBorder0,
+            this.toolStripMenuItemSplitViewBorder1,
+            this.toolStripMenuItemSplitViewBorder2,
+            this.toolStripSeparatorSplitViewContext3,
+            this.toolStripMenuItemSplitViewHorizontal,
+            this.toolStripMenuItemSplitViewVertical});
+			this.contextMenuStripSplitView.Name = "contextMenuStripSplitterView";
+			this.contextMenuStripSplitView.Size = new System.Drawing.Size(166, 220);
+			this.contextMenuStripSplitView.TabStop = true;
+			this.contextMenuStripSplitView.Text = "contextMenuStripSplitView";
 			// 
-			// toolStripMenuItemRemoveBar
+			// toolStripMenuItemSplitViewRemoveBar
 			// 
-			this.toolStripMenuItemRemoveBar.Image = global::MijoCommander.Properties.Resources.fatcow_cancel;
-			this.toolStripMenuItemRemoveBar.Name = "toolStripMenuItemRemoveBar";
-			this.toolStripMenuItemRemoveBar.Size = new System.Drawing.Size(165, 22);
-			this.toolStripMenuItemRemoveBar.Text = "Remove";
-			this.toolStripMenuItemRemoveBar.Click += new System.EventHandler(this.toolStripMenuItemRemoveBar_Click);
+			this.toolStripMenuItemSplitViewRemoveBar.Image = global::MijoCommander.Properties.Resources.fatcow_cancel;
+			this.toolStripMenuItemSplitViewRemoveBar.Name = "toolStripMenuItemSplitViewRemoveBar";
+			this.toolStripMenuItemSplitViewRemoveBar.Size = new System.Drawing.Size(165, 22);
+			this.toolStripMenuItemSplitViewRemoveBar.Text = "Remove the bar";
+			this.toolStripMenuItemSplitViewRemoveBar.Click += new System.EventHandler(this.toolStripMenuItemRemoveBar_Click);
 			// 
-			// toolStripSeparator1
+			// toolStripSeparatorSplitViewContext1
 			// 
-			this.toolStripSeparator1.Name = "toolStripSeparator1";
-			this.toolStripSeparator1.Size = new System.Drawing.Size(162, 6);
+			this.toolStripSeparatorSplitViewContext1.Name = "toolStripSeparatorSplitViewContext1";
+			this.toolStripSeparatorSplitViewContext1.Size = new System.Drawing.Size(162, 6);
 			// 
-			// toolStripMenuItemSplitterViewLeftCollapse
+			// toolStripMenuItemSplitViewLeftCollapse
 			// 
-			this.toolStripMenuItemSplitterViewLeftCollapse.Name = "toolStripMenuItemSplitterViewLeftCollapse";
-			this.toolStripMenuItemSplitterViewLeftCollapse.Size = new System.Drawing.Size(165, 22);
-			this.toolStripMenuItemSplitterViewLeftCollapse.Text = "Left view collapse";
-			this.toolStripMenuItemSplitterViewLeftCollapse.Click += new System.EventHandler(this.toolStripButtonSplitterViewLeftCollapse_Click);
+			this.toolStripMenuItemSplitViewLeftCollapse.Image = global::MijoCommander.Properties.Resources.fatcow_view_left_minus;
+			this.toolStripMenuItemSplitViewLeftCollapse.Name = "toolStripMenuItemSplitViewLeftCollapse";
+			this.toolStripMenuItemSplitViewLeftCollapse.Size = new System.Drawing.Size(165, 22);
+			this.toolStripMenuItemSplitViewLeftCollapse.Text = "Left view collapse";
+			this.toolStripMenuItemSplitViewLeftCollapse.Click += new System.EventHandler(this.toolStripButtonSplitterViewLeftCollapse_Click);
 			// 
-			// toolStripMenuItemSplitterViewRightCollapse
+			// toolStripMenuItemSplitViewRightCollapse
 			// 
-			this.toolStripMenuItemSplitterViewRightCollapse.Name = "toolStripMenuItemSplitterViewRightCollapse";
-			this.toolStripMenuItemSplitterViewRightCollapse.Size = new System.Drawing.Size(165, 22);
-			this.toolStripMenuItemSplitterViewRightCollapse.Text = "Right view collapse";
-			this.toolStripMenuItemSplitterViewRightCollapse.Click += new System.EventHandler(this.toolStripButtonSplitterViewRightCollapse_Click);
+			this.toolStripMenuItemSplitViewRightCollapse.Image = global::MijoCommander.Properties.Resources.fatcow_view_right_minus;
+			this.toolStripMenuItemSplitViewRightCollapse.Name = "toolStripMenuItemSplitViewRightCollapse";
+			this.toolStripMenuItemSplitViewRightCollapse.Size = new System.Drawing.Size(165, 22);
+			this.toolStripMenuItemSplitViewRightCollapse.Text = "Right view collapse";
+			this.toolStripMenuItemSplitViewRightCollapse.Click += new System.EventHandler(this.toolStripButtonSplitterViewRightCollapse_Click);
 			// 
-			// toolStripMenuItemSplitterViewNoCollapse
+			// toolStripMenuItemSplitViewNoCollapse
 			// 
-			this.toolStripMenuItemSplitterViewNoCollapse.Checked = true;
-			this.toolStripMenuItemSplitterViewNoCollapse.CheckState = System.Windows.Forms.CheckState.Checked;
-			this.toolStripMenuItemSplitterViewNoCollapse.Name = "toolStripMenuItemSplitterViewNoCollapse";
-			this.toolStripMenuItemSplitterViewNoCollapse.Size = new System.Drawing.Size(165, 22);
-			this.toolStripMenuItemSplitterViewNoCollapse.Text = "No collapse";
-			this.toolStripMenuItemSplitterViewNoCollapse.Click += new System.EventHandler(this.toolStripButtonSplitterViewNoCollapse_Click);
+			this.toolStripMenuItemSplitViewNoCollapse.Checked = true;
+			this.toolStripMenuItemSplitViewNoCollapse.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.toolStripMenuItemSplitViewNoCollapse.Image = global::MijoCommander.Properties.Resources.fatcow_view_no_collapse;
+			this.toolStripMenuItemSplitViewNoCollapse.Name = "toolStripMenuItemSplitViewNoCollapse";
+			this.toolStripMenuItemSplitViewNoCollapse.Size = new System.Drawing.Size(165, 22);
+			this.toolStripMenuItemSplitViewNoCollapse.Text = "No collapse";
+			this.toolStripMenuItemSplitViewNoCollapse.Click += new System.EventHandler(this.toolStripButtonSplitterViewNoCollapse_Click);
 			// 
-			// toolStripSeparator2
+			// toolStripSeparatorSplitViewContext2
 			// 
-			this.toolStripSeparator2.Name = "toolStripSeparator2";
-			this.toolStripSeparator2.Size = new System.Drawing.Size(162, 6);
+			this.toolStripSeparatorSplitViewContext2.Name = "toolStripSeparatorSplitViewContext2";
+			this.toolStripSeparatorSplitViewContext2.Size = new System.Drawing.Size(162, 6);
 			// 
-			// toolStripMenuItemSplitterViewBorder0
+			// toolStripMenuItemSplitViewBorder0
 			// 
-			this.toolStripMenuItemSplitterViewBorder0.Checked = true;
-			this.toolStripMenuItemSplitterViewBorder0.CheckState = System.Windows.Forms.CheckState.Checked;
-			this.toolStripMenuItemSplitterViewBorder0.Image = global::MijoCommander.Properties.Resources.fatcow_border_0;
-			this.toolStripMenuItemSplitterViewBorder0.Name = "toolStripMenuItemSplitterViewBorder0";
-			this.toolStripMenuItemSplitterViewBorder0.Size = new System.Drawing.Size(165, 22);
-			this.toolStripMenuItemSplitterViewBorder0.Text = "No border";
-			this.toolStripMenuItemSplitterViewBorder0.Click += new System.EventHandler(this.toolStripButtonSplitterViewBorder0_Click);
+			this.toolStripMenuItemSplitViewBorder0.Checked = true;
+			this.toolStripMenuItemSplitViewBorder0.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.toolStripMenuItemSplitViewBorder0.Image = global::MijoCommander.Properties.Resources.fatcow_border_0;
+			this.toolStripMenuItemSplitViewBorder0.Name = "toolStripMenuItemSplitViewBorder0";
+			this.toolStripMenuItemSplitViewBorder0.Size = new System.Drawing.Size(165, 22);
+			this.toolStripMenuItemSplitViewBorder0.Text = "No border";
+			this.toolStripMenuItemSplitViewBorder0.Click += new System.EventHandler(this.toolStripButtonSplitterViewBorder0_Click);
 			// 
-			// toolStripMenuItemSplitterViewBorder1
+			// toolStripMenuItemSplitViewBorder1
 			// 
-			this.toolStripMenuItemSplitterViewBorder1.Image = global::MijoCommander.Properties.Resources.fatcow_border_1;
-			this.toolStripMenuItemSplitterViewBorder1.Name = "toolStripMenuItemSplitterViewBorder1";
-			this.toolStripMenuItemSplitterViewBorder1.Size = new System.Drawing.Size(165, 22);
-			this.toolStripMenuItemSplitterViewBorder1.Text = "Thin border";
-			this.toolStripMenuItemSplitterViewBorder1.Click += new System.EventHandler(this.toolStripButtonSplitterViewBorder1_Click);
+			this.toolStripMenuItemSplitViewBorder1.Image = global::MijoCommander.Properties.Resources.fatcow_border_1;
+			this.toolStripMenuItemSplitViewBorder1.Name = "toolStripMenuItemSplitViewBorder1";
+			this.toolStripMenuItemSplitViewBorder1.Size = new System.Drawing.Size(165, 22);
+			this.toolStripMenuItemSplitViewBorder1.Text = "Thin border";
+			this.toolStripMenuItemSplitViewBorder1.Click += new System.EventHandler(this.toolStripButtonSplitterViewBorder1_Click);
 			// 
-			// toolStripMenuItemSplitterViewBorder2
+			// toolStripMenuItemSplitViewBorder2
 			// 
-			this.toolStripMenuItemSplitterViewBorder2.Image = global::MijoCommander.Properties.Resources.fatcow_border_2;
-			this.toolStripMenuItemSplitterViewBorder2.Name = "toolStripMenuItemSplitterViewBorder2";
-			this.toolStripMenuItemSplitterViewBorder2.Size = new System.Drawing.Size(165, 22);
-			this.toolStripMenuItemSplitterViewBorder2.Text = "3d border";
-			this.toolStripMenuItemSplitterViewBorder2.Click += new System.EventHandler(this.toolStripButtonSplitterViewBorder2_Click);
+			this.toolStripMenuItemSplitViewBorder2.Image = global::MijoCommander.Properties.Resources.fatcow_border_2;
+			this.toolStripMenuItemSplitViewBorder2.Name = "toolStripMenuItemSplitViewBorder2";
+			this.toolStripMenuItemSplitViewBorder2.Size = new System.Drawing.Size(165, 22);
+			this.toolStripMenuItemSplitViewBorder2.Text = "3d border";
+			this.toolStripMenuItemSplitViewBorder2.Click += new System.EventHandler(this.toolStripButtonSplitterViewBorder2_Click);
 			// 
-			// toolStripSeparator3
+			// toolStripSeparatorSplitViewContext3
 			// 
-			this.toolStripSeparator3.Name = "toolStripSeparator3";
-			this.toolStripSeparator3.Size = new System.Drawing.Size(162, 6);
+			this.toolStripSeparatorSplitViewContext3.Name = "toolStripSeparatorSplitViewContext3";
+			this.toolStripSeparatorSplitViewContext3.Size = new System.Drawing.Size(162, 6);
 			// 
-			// toolStripMenuItemSplitterViewHorizontal
+			// toolStripMenuItemSplitViewHorizontal
 			// 
-			this.toolStripMenuItemSplitterViewHorizontal.Checked = true;
-			this.toolStripMenuItemSplitterViewHorizontal.CheckState = System.Windows.Forms.CheckState.Checked;
-			this.toolStripMenuItemSplitterViewHorizontal.Image = global::MijoCommander.Properties.Resources.fatcow_split_panel;
-			this.toolStripMenuItemSplitterViewHorizontal.Name = "toolStripMenuItemSplitterViewHorizontal";
-			this.toolStripMenuItemSplitterViewHorizontal.Size = new System.Drawing.Size(165, 22);
-			this.toolStripMenuItemSplitterViewHorizontal.Text = "Horizontal";
-			this.toolStripMenuItemSplitterViewHorizontal.Click += new System.EventHandler(this.toolStripButtonSplitterViewHorizontal_Click);
+			this.toolStripMenuItemSplitViewHorizontal.Checked = true;
+			this.toolStripMenuItemSplitViewHorizontal.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.toolStripMenuItemSplitViewHorizontal.Image = global::MijoCommander.Properties.Resources.fatcow_split_panel;
+			this.toolStripMenuItemSplitViewHorizontal.Name = "toolStripMenuItemSplitViewHorizontal";
+			this.toolStripMenuItemSplitViewHorizontal.Size = new System.Drawing.Size(165, 22);
+			this.toolStripMenuItemSplitViewHorizontal.Text = "Horizontal";
+			this.toolStripMenuItemSplitViewHorizontal.Click += new System.EventHandler(this.toolStripButtonSplitterViewHorizontal_Click);
 			// 
-			// toolStripMenuItemSplitterViewVertical
+			// toolStripMenuItemSplitViewVertical
 			// 
-			this.toolStripMenuItemSplitterViewVertical.Image = global::MijoCommander.Properties.Resources.fatcow_split_panel_vertical;
-			this.toolStripMenuItemSplitterViewVertical.Name = "toolStripMenuItemSplitterViewVertical";
-			this.toolStripMenuItemSplitterViewVertical.Size = new System.Drawing.Size(165, 22);
-			this.toolStripMenuItemSplitterViewVertical.Text = "Vertical";
-			this.toolStripMenuItemSplitterViewVertical.Click += new System.EventHandler(this.toolStripButtonSplitterViewVertical_Click);
+			this.toolStripMenuItemSplitViewVertical.Image = global::MijoCommander.Properties.Resources.fatcow_split_panel_vertical;
+			this.toolStripMenuItemSplitViewVertical.Name = "toolStripMenuItemSplitViewVertical";
+			this.toolStripMenuItemSplitViewVertical.Size = new System.Drawing.Size(165, 22);
+			this.toolStripMenuItemSplitViewVertical.Text = "Vertical";
+			this.toolStripMenuItemSplitViewVertical.Click += new System.EventHandler(this.toolStripButtonSplitterViewVertical_Click);
 			// 
-			// toolStripButtonSplitterViewLeftCollapse
+			// toolStripButtonSplitViewLeftCollapse
 			// 
-			this.toolStripButtonSplitterViewLeftCollapse.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-			this.toolStripButtonSplitterViewLeftCollapse.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonSplitterViewLeftCollapse.Image")));
-			this.toolStripButtonSplitterViewLeftCollapse.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButtonSplitterViewLeftCollapse.Name = "toolStripButtonSplitterViewLeftCollapse";
-			this.toolStripButtonSplitterViewLeftCollapse.Size = new System.Drawing.Size(23, 22);
-			this.toolStripButtonSplitterViewLeftCollapse.Text = "1";
-			this.toolStripButtonSplitterViewLeftCollapse.Click += new System.EventHandler(this.toolStripButtonSplitterViewLeftCollapse_Click);
+			this.toolStripButtonSplitViewLeftCollapse.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripButtonSplitViewLeftCollapse.Image = global::MijoCommander.Properties.Resources.fatcow_view_left_minus;
+			this.toolStripButtonSplitViewLeftCollapse.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButtonSplitViewLeftCollapse.Name = "toolStripButtonSplitViewLeftCollapse";
+			this.toolStripButtonSplitViewLeftCollapse.Size = new System.Drawing.Size(23, 22);
+			this.toolStripButtonSplitViewLeftCollapse.Text = "1";
+			this.toolStripButtonSplitViewLeftCollapse.Click += new System.EventHandler(this.toolStripButtonSplitterViewLeftCollapse_Click);
 			// 
-			// toolStripButtonSplitterViewRightCollapse
+			// toolStripButtonSplitViewRightCollapse
 			// 
-			this.toolStripButtonSplitterViewRightCollapse.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-			this.toolStripButtonSplitterViewRightCollapse.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonSplitterViewRightCollapse.Image")));
-			this.toolStripButtonSplitterViewRightCollapse.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButtonSplitterViewRightCollapse.Name = "toolStripButtonSplitterViewRightCollapse";
-			this.toolStripButtonSplitterViewRightCollapse.Size = new System.Drawing.Size(23, 22);
-			this.toolStripButtonSplitterViewRightCollapse.Text = "2";
-			this.toolStripButtonSplitterViewRightCollapse.Click += new System.EventHandler(this.toolStripButtonSplitterViewRightCollapse_Click);
+			this.toolStripButtonSplitViewRightCollapse.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripButtonSplitViewRightCollapse.Image = global::MijoCommander.Properties.Resources.fatcow_view_right_minus;
+			this.toolStripButtonSplitViewRightCollapse.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButtonSplitViewRightCollapse.Name = "toolStripButtonSplitViewRightCollapse";
+			this.toolStripButtonSplitViewRightCollapse.Size = new System.Drawing.Size(23, 22);
+			this.toolStripButtonSplitViewRightCollapse.Text = "2";
+			this.toolStripButtonSplitViewRightCollapse.Click += new System.EventHandler(this.toolStripButtonSplitterViewRightCollapse_Click);
 			// 
-			// toolStripButtonSplitterViewNoCollapse
+			// toolStripButtonSplitViewNoCollapse
 			// 
-			this.toolStripButtonSplitterViewNoCollapse.Checked = true;
-			this.toolStripButtonSplitterViewNoCollapse.CheckState = System.Windows.Forms.CheckState.Checked;
-			this.toolStripButtonSplitterViewNoCollapse.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-			this.toolStripButtonSplitterViewNoCollapse.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonSplitterViewNoCollapse.Image")));
-			this.toolStripButtonSplitterViewNoCollapse.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButtonSplitterViewNoCollapse.Name = "toolStripButtonSplitterViewNoCollapse";
-			this.toolStripButtonSplitterViewNoCollapse.Size = new System.Drawing.Size(23, 22);
-			this.toolStripButtonSplitterViewNoCollapse.Text = "3";
-			this.toolStripButtonSplitterViewNoCollapse.Click += new System.EventHandler(this.toolStripButtonSplitterViewNoCollapse_Click);
+			this.toolStripButtonSplitViewNoCollapse.Checked = true;
+			this.toolStripButtonSplitViewNoCollapse.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.toolStripButtonSplitViewNoCollapse.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripButtonSplitViewNoCollapse.Image = global::MijoCommander.Properties.Resources.fatcow_view_no_collapse;
+			this.toolStripButtonSplitViewNoCollapse.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButtonSplitViewNoCollapse.Name = "toolStripButtonSplitViewNoCollapse";
+			this.toolStripButtonSplitViewNoCollapse.Size = new System.Drawing.Size(23, 22);
+			this.toolStripButtonSplitViewNoCollapse.Text = "3";
+			this.toolStripButtonSplitViewNoCollapse.Click += new System.EventHandler(this.toolStripButtonSplitterViewNoCollapse_Click);
 			// 
-			// toolStripSeparatorSplitterView1
+			// toolStripSeparatorSplitView1
 			// 
-			this.toolStripSeparatorSplitterView1.Name = "toolStripSeparatorSplitterView1";
-			this.toolStripSeparatorSplitterView1.Size = new System.Drawing.Size(6, 25);
+			this.toolStripSeparatorSplitView1.Name = "toolStripSeparatorSplitView1";
+			this.toolStripSeparatorSplitView1.Size = new System.Drawing.Size(6, 25);
 			// 
-			// toolStripButtonSplitterViewBorder0
+			// toolStripButtonSplitViewBorder0
 			// 
-			this.toolStripButtonSplitterViewBorder0.Checked = true;
-			this.toolStripButtonSplitterViewBorder0.CheckState = System.Windows.Forms.CheckState.Checked;
-			this.toolStripButtonSplitterViewBorder0.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripButtonSplitterViewBorder0.Image = global::MijoCommander.Properties.Resources.fatcow_border_0;
-			this.toolStripButtonSplitterViewBorder0.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButtonSplitterViewBorder0.Name = "toolStripButtonSplitterViewBorder0";
-			this.toolStripButtonSplitterViewBorder0.Size = new System.Drawing.Size(23, 22);
-			this.toolStripButtonSplitterViewBorder0.Text = "None border";
-			this.toolStripButtonSplitterViewBorder0.Click += new System.EventHandler(this.toolStripButtonSplitterViewBorder0_Click);
+			this.toolStripButtonSplitViewBorder0.Checked = true;
+			this.toolStripButtonSplitViewBorder0.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.toolStripButtonSplitViewBorder0.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripButtonSplitViewBorder0.Image = global::MijoCommander.Properties.Resources.fatcow_border_0;
+			this.toolStripButtonSplitViewBorder0.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButtonSplitViewBorder0.Name = "toolStripButtonSplitViewBorder0";
+			this.toolStripButtonSplitViewBorder0.Size = new System.Drawing.Size(23, 22);
+			this.toolStripButtonSplitViewBorder0.Text = "None border";
+			this.toolStripButtonSplitViewBorder0.Click += new System.EventHandler(this.toolStripButtonSplitterViewBorder0_Click);
 			// 
-			// toolStripButtonSplitterViewBorder1
+			// toolStripButtonSplitViewBorder1
 			// 
-			this.toolStripButtonSplitterViewBorder1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripButtonSplitterViewBorder1.Image = global::MijoCommander.Properties.Resources.fatcow_border_1;
-			this.toolStripButtonSplitterViewBorder1.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButtonSplitterViewBorder1.Name = "toolStripButtonSplitterViewBorder1";
-			this.toolStripButtonSplitterViewBorder1.Size = new System.Drawing.Size(23, 22);
-			this.toolStripButtonSplitterViewBorder1.Text = "Thin border";
-			this.toolStripButtonSplitterViewBorder1.Click += new System.EventHandler(this.toolStripButtonSplitterViewBorder1_Click);
+			this.toolStripButtonSplitViewBorder1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripButtonSplitViewBorder1.Image = global::MijoCommander.Properties.Resources.fatcow_border_1;
+			this.toolStripButtonSplitViewBorder1.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButtonSplitViewBorder1.Name = "toolStripButtonSplitViewBorder1";
+			this.toolStripButtonSplitViewBorder1.Size = new System.Drawing.Size(23, 22);
+			this.toolStripButtonSplitViewBorder1.Text = "Thin border";
+			this.toolStripButtonSplitViewBorder1.Click += new System.EventHandler(this.toolStripButtonSplitterViewBorder1_Click);
 			// 
-			// toolStripButtonSplitterViewBorder2
+			// toolStripButtonSplitViewBorder2
 			// 
-			this.toolStripButtonSplitterViewBorder2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripButtonSplitterViewBorder2.Image = global::MijoCommander.Properties.Resources.fatcow_border_2;
-			this.toolStripButtonSplitterViewBorder2.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButtonSplitterViewBorder2.Name = "toolStripButtonSplitterViewBorder2";
-			this.toolStripButtonSplitterViewBorder2.Size = new System.Drawing.Size(23, 22);
-			this.toolStripButtonSplitterViewBorder2.Text = "3d border";
-			this.toolStripButtonSplitterViewBorder2.Click += new System.EventHandler(this.toolStripButtonSplitterViewBorder2_Click);
+			this.toolStripButtonSplitViewBorder2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripButtonSplitViewBorder2.Image = global::MijoCommander.Properties.Resources.fatcow_border_2;
+			this.toolStripButtonSplitViewBorder2.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButtonSplitViewBorder2.Name = "toolStripButtonSplitViewBorder2";
+			this.toolStripButtonSplitViewBorder2.Size = new System.Drawing.Size(23, 22);
+			this.toolStripButtonSplitViewBorder2.Text = "3d border";
+			this.toolStripButtonSplitViewBorder2.Click += new System.EventHandler(this.toolStripButtonSplitterViewBorder2_Click);
 			// 
-			// toolStripSeparatorSplitterView2
+			// toolStripSeparatorSplitView2
 			// 
-			this.toolStripSeparatorSplitterView2.Name = "toolStripSeparatorSplitterView2";
-			this.toolStripSeparatorSplitterView2.Size = new System.Drawing.Size(6, 25);
+			this.toolStripSeparatorSplitView2.Name = "toolStripSeparatorSplitView2";
+			this.toolStripSeparatorSplitView2.Size = new System.Drawing.Size(6, 25);
 			// 
-			// toolStripButtonSplitterViewHorizontal
+			// toolStripButtonSplitViewHorizontal
 			// 
-			this.toolStripButtonSplitterViewHorizontal.Checked = true;
-			this.toolStripButtonSplitterViewHorizontal.CheckState = System.Windows.Forms.CheckState.Checked;
-			this.toolStripButtonSplitterViewHorizontal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripButtonSplitterViewHorizontal.Image = global::MijoCommander.Properties.Resources.fatcow_split_panel;
-			this.toolStripButtonSplitterViewHorizontal.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButtonSplitterViewHorizontal.Name = "toolStripButtonSplitterViewHorizontal";
-			this.toolStripButtonSplitterViewHorizontal.Size = new System.Drawing.Size(23, 22);
-			this.toolStripButtonSplitterViewHorizontal.Text = "Horizontal";
-			this.toolStripButtonSplitterViewHorizontal.Click += new System.EventHandler(this.toolStripButtonSplitterViewHorizontal_Click);
+			this.toolStripButtonSplitViewHorizontal.Checked = true;
+			this.toolStripButtonSplitViewHorizontal.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.toolStripButtonSplitViewHorizontal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripButtonSplitViewHorizontal.Image = global::MijoCommander.Properties.Resources.fatcow_split_panel;
+			this.toolStripButtonSplitViewHorizontal.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButtonSplitViewHorizontal.Name = "toolStripButtonSplitViewHorizontal";
+			this.toolStripButtonSplitViewHorizontal.Size = new System.Drawing.Size(23, 22);
+			this.toolStripButtonSplitViewHorizontal.Text = "Horizontal";
+			this.toolStripButtonSplitViewHorizontal.Click += new System.EventHandler(this.toolStripButtonSplitterViewHorizontal_Click);
 			// 
-			// toolStripButtonSplitterViewVertical
+			// toolStripButtonSplitViewVertical
 			// 
-			this.toolStripButtonSplitterViewVertical.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripButtonSplitterViewVertical.Image = global::MijoCommander.Properties.Resources.fatcow_split_panel_vertical;
-			this.toolStripButtonSplitterViewVertical.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButtonSplitterViewVertical.Name = "toolStripButtonSplitterViewVertical";
-			this.toolStripButtonSplitterViewVertical.Size = new System.Drawing.Size(23, 22);
-			this.toolStripButtonSplitterViewVertical.Text = "Vertical";
-			this.toolStripButtonSplitterViewVertical.Click += new System.EventHandler(this.toolStripButtonSplitterViewVertical_Click);
+			this.toolStripButtonSplitViewVertical.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripButtonSplitViewVertical.Image = global::MijoCommander.Properties.Resources.fatcow_split_panel_vertical;
+			this.toolStripButtonSplitViewVertical.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButtonSplitViewVertical.Name = "toolStripButtonSplitViewVertical";
+			this.toolStripButtonSplitViewVertical.Size = new System.Drawing.Size(23, 22);
+			this.toolStripButtonSplitViewVertical.Text = "Vertical";
+			this.toolStripButtonSplitViewVertical.Click += new System.EventHandler(this.toolStripButtonSplitterViewVertical_Click);
+			// 
+			// toolStripButtonFileWindow
+			// 
+			this.toolStripButtonFileWindow.AllowItemReorder = true;
+			this.toolStripButtonFileWindow.Dock = System.Windows.Forms.DockStyle.None;
+			this.toolStripButtonFileWindow.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButtonFileWindowGrid,
+            this.toolStripButtonFileWindowHeader});
+			this.toolStripButtonFileWindow.Location = new System.Drawing.Point(79, 0);
+			this.toolStripButtonFileWindow.Name = "toolStripButtonFileWindow";
+			this.toolStripButtonFileWindow.Size = new System.Drawing.Size(89, 25);
+			this.toolStripButtonFileWindow.TabIndex = 3;
+			this.toolStripButtonFileWindow.TabStop = true;
+			this.toolStripButtonFileWindow.Text = "File window";
+			// 
+			// toolStripButtonFileWindowGrid
+			// 
+			this.toolStripButtonFileWindowGrid.CheckOnClick = true;
+			this.toolStripButtonFileWindowGrid.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripButtonFileWindowGrid.Image = global::MijoCommander.Properties.Resources.fatcow_border_0;
+			this.toolStripButtonFileWindowGrid.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButtonFileWindowGrid.Name = "toolStripButtonFileWindowGrid";
+			this.toolStripButtonFileWindowGrid.Size = new System.Drawing.Size(23, 22);
+			this.toolStripButtonFileWindowGrid.Text = "Grid enabled";
+			this.toolStripButtonFileWindowGrid.Click += new System.EventHandler(this.toolStripButtonFileWindowGrid_Click);
+			// 
+			// toolStripButtonFileWindowHeader
+			// 
+			this.toolStripButtonFileWindowHeader.Checked = true;
+			this.toolStripButtonFileWindowHeader.CheckOnClick = true;
+			this.toolStripButtonFileWindowHeader.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.toolStripButtonFileWindowHeader.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripButtonFileWindowHeader.Image = global::MijoCommander.Properties.Resources.fatcow_border_top;
+			this.toolStripButtonFileWindowHeader.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButtonFileWindowHeader.Name = "toolStripButtonFileWindowHeader";
+			this.toolStripButtonFileWindowHeader.Size = new System.Drawing.Size(23, 22);
+			this.toolStripButtonFileWindowHeader.Text = "Header enabled";
+			this.toolStripButtonFileWindowHeader.Click += new System.EventHandler(this.toolStripButtonFileWindowHeader_Click);
 			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(649, 499);
+			this.ClientSize = new System.Drawing.Size(641, 491);
 			this.Controls.Add(this.toolStripContainer);
 			this.Controls.Add(this.menuStrip);
 			this.MainMenuStrip = this.menuStrip;
@@ -568,9 +692,11 @@
 			this.toolStripContainer.TopToolStripPanel.PerformLayout();
 			this.toolStripContainer.ResumeLayout(false);
 			this.toolStripContainer.PerformLayout();
-			this.toolStripSplitterView.ResumeLayout(false);
-			this.toolStripSplitterView.PerformLayout();
-			this.contextMenuStripSplitterView.ResumeLayout(false);
+			this.toolStripSplitView.ResumeLayout(false);
+			this.toolStripSplitView.PerformLayout();
+			this.contextMenuStripSplitView.ResumeLayout(false);
+			this.toolStripButtonFileWindow.ResumeLayout(false);
+			this.toolStripButtonFileWindow.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -586,34 +712,39 @@
 				private System.Windows.Forms.ListView listViewRight;
 				private System.Windows.Forms.ToolStripButton toolStripButtonOptions;
 				private System.Windows.Forms.ToolStripContainer toolStripContainer;
-				private System.Windows.Forms.ToolStrip toolStripSplitterView;
-				private System.Windows.Forms.ToolStripButton toolStripButtonSplitterViewBorder0;
-				private System.Windows.Forms.ToolStripButton toolStripButtonSplitterViewBorder1;
-				private System.Windows.Forms.ToolStripButton toolStripButtonSplitterViewBorder2;
-				private System.Windows.Forms.ToolStripButton toolStripButtonSplitterViewLeftCollapse;
-				private System.Windows.Forms.ToolStripButton toolStripButtonSplitterViewRightCollapse;
-				private System.Windows.Forms.ToolStripButton toolStripButtonSplitterViewNoCollapse;
-				private System.Windows.Forms.ToolStripSeparator toolStripSeparatorSplitterView1;
-				private System.Windows.Forms.ToolStripSeparator toolStripSeparatorSplitterView2;
-				private System.Windows.Forms.ToolStripButton toolStripButtonSplitterViewHorizontal;
-				private System.Windows.Forms.ToolStripButton toolStripButtonSplitterViewVertical;
-				private System.Windows.Forms.ContextMenuStrip contextMenuStripSplitterView;
-				private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemRemoveBar;
-				private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-				private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSplitterViewLeftCollapse;
-				private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSplitterViewRightCollapse;
-				private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSplitterViewNoCollapse;
-				private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-				private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSplitterViewBorder0;
-				private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSplitterViewBorder1;
-				private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSplitterViewBorder2;
+				private System.Windows.Forms.ToolStrip toolStripSplitView;
+				private System.Windows.Forms.ToolStripButton toolStripButtonSplitViewBorder0;
+				private System.Windows.Forms.ToolStripButton toolStripButtonSplitViewBorder1;
+				private System.Windows.Forms.ToolStripButton toolStripButtonSplitViewBorder2;
+				private System.Windows.Forms.ToolStripButton toolStripButtonSplitViewLeftCollapse;
+				private System.Windows.Forms.ToolStripButton toolStripButtonSplitViewRightCollapse;
+				private System.Windows.Forms.ToolStripButton toolStripButtonSplitViewNoCollapse;
+				private System.Windows.Forms.ToolStripSeparator toolStripSeparatorSplitView1;
+				private System.Windows.Forms.ToolStripSeparator toolStripSeparatorSplitView2;
+				private System.Windows.Forms.ToolStripButton toolStripButtonSplitViewHorizontal;
+				private System.Windows.Forms.ToolStripButton toolStripButtonSplitViewVertical;
+				private System.Windows.Forms.ContextMenuStrip contextMenuStripSplitView;
+				private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSplitViewRemoveBar;
+				private System.Windows.Forms.ToolStripSeparator toolStripSeparatorSplitViewContext1;
+				private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSplitViewLeftCollapse;
+				private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSplitViewRightCollapse;
+				private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSplitViewNoCollapse;
+				private System.Windows.Forms.ToolStripSeparator toolStripSeparatorSplitViewContext2;
+				private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSplitViewBorder0;
+				private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSplitViewBorder1;
+				private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSplitViewBorder2;
 				private System.Windows.Forms.ToolTip toolTip;
-				private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-				private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSplitterViewHorizontal;
-				private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSplitterViewVertical;
+				private System.Windows.Forms.ToolStripSeparator toolStripSeparatorSplitViewContext3;
+				private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSplitViewHorizontal;
+				private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSplitViewVertical;
 				private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemFile;
 				private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemExit;
 				private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemView;
+				private System.Windows.Forms.ColumnHeader columnHeaderLeftName;
+				private System.Windows.Forms.ColumnHeader columnHeaderRightName;
+				private System.Windows.Forms.ColumnHeader columnHeaderLeftFilesize;
+				private System.Windows.Forms.ColumnHeader columnHeaderRightFilesize;
+				private System.Windows.Forms.ToolStripMenuItem splitViewToolStripMenuItem;
 				private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemViewLeftCollapse;
 				private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemViewRightCollapse;
 				private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemViewNoCollapse;
@@ -624,6 +755,11 @@
 				private System.Windows.Forms.ToolStripSeparator toolStripSeparatorView2;
 				private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemViewHorizontal;
 				private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemViewVertical;
+				private System.Windows.Forms.ToolStripMenuItem enabledisableSymbolBarsToolStripMenuItem;
+				private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemToolbarSplitView;
+				private System.Windows.Forms.ToolStrip toolStripButtonFileWindow;
+				private System.Windows.Forms.ToolStripButton toolStripButtonFileWindowGrid;
+				private System.Windows.Forms.ToolStripButton toolStripButtonFileWindowHeader;
     }
 }
 

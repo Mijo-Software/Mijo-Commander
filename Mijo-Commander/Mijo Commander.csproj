@@ -143,6 +143,90 @@
   <ItemGroup>
     <None Include="Resources\fugue-door1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fugue-view-right-plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fugue-view-left-minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fugue-view-left-plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fugue-view-right-minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fugue-view-no-collapse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fatcow-view-left-minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fatcow-view-left-plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fatcow-view-no-collapse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fatcow-view-right-minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fatcow-view-right-plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fugue-tick-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fatcow-disk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fatcow-help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fatcow-information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fatcow-tick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fatcow-tick-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fugue-disk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fugue-help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fugue-information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fugue-tick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fugue-toolbar-delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fatcow-toolbar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fatcow-toolbar-add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fatcow-toolbar-delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fugue-toolbar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fugue-toolbar-add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fugue-border-top.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fatcow-border-top.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
