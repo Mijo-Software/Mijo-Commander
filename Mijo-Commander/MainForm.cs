@@ -19,7 +19,20 @@ namespace Mijo_Commander
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1300:SpecifyMessageBoxOptions")]
     private void MainForm_Load(object sender, EventArgs e)
     {
-			menuStrip.RenderMode = ToolStripRenderMode.System;
+			listViewLeft
+				.GetType()
+				.GetProperty("DoubleBuffered", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic)
+				.SetValue(listViewLeft, true, null);
+			listViewRight
+				.GetType()
+				.GetProperty("DoubleBuffered", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic)
+				.SetValue(listViewRight, true, null);
+
+			if (Directory.Exists(".."))
+			{
+				listViewLeft.Items.Add("..");
+				listViewRight.Items.Add("..");
+			}
 
 			try
 			{
@@ -209,22 +222,18 @@ namespace Mijo_Commander
 
 		private void listViewLeft_Enter(object sender, EventArgs e)
 		{
-			listViewLeft.BorderStyle = BorderStyle.FixedSingle;
 		}
 
 		private void listViewLeft_Leave(object sender, EventArgs e)
 		{
-			listViewLeft.BorderStyle = BorderStyle.Fixed3D;
 		}
 
 		private void listViewRight_Enter(object sender, EventArgs e)
 		{
-			listViewRight.BorderStyle = BorderStyle.FixedSingle;
 		}
 
 		private void listViewRight_Leave(object sender, EventArgs e)
 		{
-			listViewRight.BorderStyle = BorderStyle.Fixed3D;
 		}
 
 		private void toolStripMenuItemToolbarSplitView_Click(object sender, EventArgs e)
