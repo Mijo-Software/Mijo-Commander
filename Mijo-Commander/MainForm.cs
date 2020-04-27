@@ -1,15 +1,29 @@
 ﻿using System;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using MijoCommander;
 using MijoCommander.Properties;
+using System.Text;
 
-namespace Mijo_Commander
+namespace MijoCommander
 {
 	public partial class MainForm : Form
   {
 		private int splitterWidth = 0;
 		private int splitterHeight = 0;
+		private string fullPathLeft;
+		private string fullPathRight;
+
+		[DllImport("kernel32.dll", CharSet = CharSet.Auto)]
+		public static extern uint GetShortPathName(string lpszLongPath, StringBuilder lpszShortPath, uint cchBuffer);
+
+		private static string GetShortPath(string longPath)
+		{
+			StringBuilder shortPath = new StringBuilder(255);
+			GetShortPathName(longPath, shortPath, 255);
+			return shortPath.ToString();
+		}
 
 		public MainForm()
     {
@@ -19,6 +33,8 @@ namespace Mijo_Commander
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1300:SpecifyMessageBoxOptions")]
     private void MainForm_Load(object sender, EventArgs e)
     {
+			toolStripStatusLabelInfo.Text = "";
+			// avoid flicking on listviews
 			listViewLeft
 				.GetType()
 				.GetProperty("DoubleBuffered", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic)
@@ -27,6 +43,9 @@ namespace Mijo_Commander
 				.GetType()
 				.GetProperty("DoubleBuffered", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic)
 				.SetValue(listViewRight, true, null);
+			// get current directory
+			fullPathLeft = Directory.GetCurrentDirectory();
+			fullPathRight = Directory.GetCurrentDirectory();
 
 			if (Directory.Exists(".."))
 			{
@@ -36,21 +55,21 @@ namespace Mijo_Commander
 
 			try
 			{
-				if (Directory.Exists(Directory.GetCurrentDirectory()))
+				if (Directory.Exists(fullPathLeft))
 				{
-					foreach (DirectoryInfo directory in new DirectoryInfo(Directory.GetCurrentDirectory()).GetDirectories())
+					foreach (DirectoryInfo directory in new DirectoryInfo(fullPathLeft).GetDirectories())
 					{
 						listViewLeft.Items.Add(directory.Name);
 					}
-					foreach (FileInfo file in new DirectoryInfo(Directory.GetCurrentDirectory()).GetFiles())
+					foreach (FileInfo file in new DirectoryInfo(fullPathLeft).GetFiles())
 					{
 						listViewLeft.Items.Add(file.Name);
 					}
-					foreach (DirectoryInfo directory in new DirectoryInfo(Directory.GetCurrentDirectory()).GetDirectories())
+					foreach (DirectoryInfo directory in new DirectoryInfo(fullPathRight).GetDirectories())
 					{
 						listViewRight.Items.Add(directory.Name);
 					}
-					foreach (FileInfo file in new DirectoryInfo(Directory.GetCurrentDirectory()).GetFiles())
+					foreach (FileInfo file in new DirectoryInfo(fullPathRight).GetFiles())
 					{
 						listViewRight.Items.Add(file.Name);
 					}
@@ -321,6 +340,24 @@ namespace Mijo_Commander
 		{
 			toolStripFileWindow.Visible = false;
 			toolStripMenuItemFileWindow.Checked = false;
+		}
+
+		private void listViewLeft_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			if (listViewLeft.SelectedIndices.Count > 0)
+			{
+				int selectedIndex = listViewLeft.SelectedIndices[0];
+				toolStripStatusLabelInfo.Text = GetShortPath(fullPathLeft) + Path.DirectorySeparatorChar + listViewLeft.Items[selectedIndex].Text; 
+			}
+		}
+
+		private void listViewLeft_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+		{
+			/*
+			ListView.SelectedListViewItemCollection listViewLeftItems = listViewLeft.SelectedItems;
+			ListViewItem item = listViewLeft.SelectedItems[0];// listViewLeftItems[0];
+			toolStripStatusLabelInfo.Text = GetShortPath(fullPathLeft) + Path.DirectorySeparatorChar + item.Text;
+			 * */
 		}
   }
 }

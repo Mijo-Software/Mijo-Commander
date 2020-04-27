@@ -1,4 +1,4 @@
-﻿namespace Mijo_Commander
+﻿namespace MijoCommander
 {
     partial class MainForm
     {
@@ -59,6 +59,7 @@
 			this.toolStripMenuItemToolbarSplitView = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItemFileWindow = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripOperations = new System.Windows.Forms.ToolStrip();
+			this.toolStripButtonOptions = new System.Windows.Forms.ToolStripButton();
 			this.statusStrip = new System.Windows.Forms.StatusStrip();
 			this.splitContainer = new System.Windows.Forms.SplitContainer();
 			this.listViewLeft = new System.Windows.Forms.ListView();
@@ -103,9 +104,10 @@
 			this.toolStripButtonFileWindowHeader = new System.Windows.Forms.ToolStripButton();
 			this.toolStripButtonFileWindowFullRowSelect = new System.Windows.Forms.ToolStripButton();
 			this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-			this.toolStripButtonOptions = new System.Windows.Forms.ToolStripButton();
+			this.toolStripStatusLabelInfo = new System.Windows.Forms.ToolStripStatusLabel();
 			this.menuStrip.SuspendLayout();
 			this.toolStripOperations.SuspendLayout();
+			this.statusStrip.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
 			this.splitContainer.Panel1.SuspendLayout();
 			this.splitContainer.Panel2.SuspendLayout();
@@ -148,7 +150,7 @@
 			this.toolStripMenuItemExit.AutoToolTip = true;
 			this.toolStripMenuItemExit.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemExit.Image")));
 			this.toolStripMenuItemExit.Name = "toolStripMenuItemExit";
-			this.toolStripMenuItemExit.Size = new System.Drawing.Size(152, 22);
+			this.toolStripMenuItemExit.Size = new System.Drawing.Size(92, 22);
 			this.toolStripMenuItemExit.Text = "E&xit";
 			this.toolStripMenuItemExit.Click += new System.EventHandler(this.toolStripMenuItemExit_Click);
 			// 
@@ -169,21 +171,21 @@
 			this.toolStripMenuItemSettingsOptions.AutoToolTip = true;
 			this.toolStripMenuItemSettingsOptions.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemSettingsOptions.Image")));
 			this.toolStripMenuItemSettingsOptions.Name = "toolStripMenuItemSettingsOptions";
-			this.toolStripMenuItemSettingsOptions.Size = new System.Drawing.Size(152, 22);
+			this.toolStripMenuItemSettingsOptions.Size = new System.Drawing.Size(137, 22);
 			this.toolStripMenuItemSettingsOptions.Text = "&Options";
 			this.toolStripMenuItemSettingsOptions.Click += new System.EventHandler(this.toolStripButtonOptions_Click);
 			// 
 			// toolStripSeparatorSettings1
 			// 
 			this.toolStripSeparatorSettings1.Name = "toolStripSeparatorSettings1";
-			this.toolStripSeparatorSettings1.Size = new System.Drawing.Size(149, 6);
+			this.toolStripSeparatorSettings1.Size = new System.Drawing.Size(134, 6);
 			// 
 			// toolStripMenuItemSettingsColorThemes
 			// 
 			this.toolStripMenuItemSettingsColorThemes.AutoToolTip = true;
 			this.toolStripMenuItemSettingsColorThemes.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemSettingsColorThemes.Image")));
 			this.toolStripMenuItemSettingsColorThemes.Name = "toolStripMenuItemSettingsColorThemes";
-			this.toolStripMenuItemSettingsColorThemes.Size = new System.Drawing.Size(152, 22);
+			this.toolStripMenuItemSettingsColorThemes.Size = new System.Drawing.Size(137, 22);
 			this.toolStripMenuItemSettingsColorThemes.Text = "Color themes";
 			// 
 			// toolStripMenuItemSettingsIconThemes
@@ -191,7 +193,7 @@
 			this.toolStripMenuItemSettingsIconThemes.AutoToolTip = true;
 			this.toolStripMenuItemSettingsIconThemes.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemSettingsIconThemes.Image")));
 			this.toolStripMenuItemSettingsIconThemes.Name = "toolStripMenuItemSettingsIconThemes";
-			this.toolStripMenuItemSettingsIconThemes.Size = new System.Drawing.Size(152, 22);
+			this.toolStripMenuItemSettingsIconThemes.Size = new System.Drawing.Size(137, 22);
 			this.toolStripMenuItemSettingsIconThemes.Text = "Icon themes";
 			// 
 			// toolStripMenuItemView
@@ -402,9 +404,21 @@
 			this.toolStripOperations.TabStop = true;
 			this.toolStripOperations.Text = "Operations";
 			// 
+			// toolStripButtonOptions
+			// 
+			this.toolStripButtonOptions.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripButtonOptions.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonOptions.Image")));
+			this.toolStripButtonOptions.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButtonOptions.Name = "toolStripButtonOptions";
+			this.toolStripButtonOptions.Size = new System.Drawing.Size(23, 22);
+			this.toolStripButtonOptions.Text = "Options";
+			this.toolStripButtonOptions.Click += new System.EventHandler(this.toolStripButtonOptions_Click);
+			// 
 			// statusStrip
 			// 
 			this.statusStrip.Dock = System.Windows.Forms.DockStyle.None;
+			this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabelInfo});
 			this.statusStrip.Location = new System.Drawing.Point(0, 0);
 			this.statusStrip.Name = "statusStrip";
 			this.statusStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
@@ -449,6 +463,8 @@
 			this.listViewLeft.TabIndex = 1;
 			this.listViewLeft.UseCompatibleStateImageBehavior = false;
 			this.listViewLeft.View = System.Windows.Forms.View.Details;
+			this.listViewLeft.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listViewLeft_ItemSelectionChanged);
+			this.listViewLeft.SelectedIndexChanged += new System.EventHandler(this.listViewLeft_SelectedIndexChanged);
 			this.listViewLeft.Enter += new System.EventHandler(this.listViewLeft_Enter);
 			this.listViewLeft.Leave += new System.EventHandler(this.listViewLeft_Leave);
 			// 
@@ -856,15 +872,11 @@
 			this.toolStripButtonFileWindowFullRowSelect.Text = "Full row select";
 			this.toolStripButtonFileWindowFullRowSelect.Click += new System.EventHandler(this.toolStripButtonFileWindowFullRowSelect_Click);
 			// 
-			// toolStripButtonOptions
+			// toolStripStatusLabelInfo
 			// 
-			this.toolStripButtonOptions.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripButtonOptions.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonOptions.Image")));
-			this.toolStripButtonOptions.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButtonOptions.Name = "toolStripButtonOptions";
-			this.toolStripButtonOptions.Size = new System.Drawing.Size(23, 22);
-			this.toolStripButtonOptions.Text = "Options";
-			this.toolStripButtonOptions.Click += new System.EventHandler(this.toolStripButtonOptions_Click);
+			this.toolStripStatusLabelInfo.Name = "toolStripStatusLabelInfo";
+			this.toolStripStatusLabelInfo.Size = new System.Drawing.Size(25, 17);
+			this.toolStripStatusLabelInfo.Text = "info";
 			// 
 			// MainForm
 			// 
@@ -882,6 +894,8 @@
 			this.menuStrip.PerformLayout();
 			this.toolStripOperations.ResumeLayout(false);
 			this.toolStripOperations.PerformLayout();
+			this.statusStrip.ResumeLayout(false);
+			this.statusStrip.PerformLayout();
 			this.splitContainer.Panel1.ResumeLayout(false);
 			this.splitContainer.Panel2.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer)).EndInit();
@@ -980,6 +994,7 @@
 				private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSettingsColorThemes;
 				private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSettingsIconThemes;
 				private System.Windows.Forms.ToolStripButton toolStripButtonOptions;
+				private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelInfo;
     }
 }
 

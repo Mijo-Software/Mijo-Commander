@@ -34,7 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Mijo_Commander.Program</StartupObject>
+    <StartupObject>MijoCommander.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
