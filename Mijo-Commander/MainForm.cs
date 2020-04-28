@@ -14,6 +14,8 @@ namespace MijoCommander
 		private string fullPathLeft;
 		private string fullPathRight;
 
+		#region own methods
+
 		[DllImport("kernel32.dll", CharSet = CharSet.Auto)]
 		public static extern uint GetShortPathName(string lpszLongPath, StringBuilder lpszShortPath, uint cchBuffer);
 
@@ -24,12 +26,7 @@ namespace MijoCommander
 			return shortPath.ToString();
 		}
 
-		public MainForm()
-    {
-			InitializeComponent();
-    }
-
-		private void ListLeftView()
+		private void UpdateListLeftView()
 		{
 			if (Directory.Exists(".."))
 			{
@@ -71,7 +68,7 @@ namespace MijoCommander
 			}
 		}
 
-		private void ListRightView()
+		private void UpdateListRightView()
 		{
 			if (Directory.Exists(".."))
 			{
@@ -113,6 +110,19 @@ namespace MijoCommander
 			}
 		}
 
+		#endregion
+
+		#region Constructor
+
+		public MainForm()
+    {
+			InitializeComponent();
+    }
+
+		#endregion
+
+		#region MainForm* event handlers
+
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1300:SpecifyMessageBoxOptions")]
     private void MainForm_Load(object sender, EventArgs e)
     {
@@ -130,23 +140,25 @@ namespace MijoCommander
 			fullPathLeft = Directory.GetCurrentDirectory();
 			fullPathRight = Directory.GetCurrentDirectory();
 
-			ListLeftView();
-			ListRightView();
-
-			
+			UpdateListLeftView();
+			UpdateListRightView();
 
 			splitterWidth = ClientSize.Width / 2;
 			splitterHeight = ClientSize.Height / 2;
 			splitContainer.SplitterDistance = ClientSize.Width / 2;
 		}
 
-		private void toolStripButtonOptions_Click(object sender, EventArgs e)
+		#endregion
+
+		#region Click event handlers
+
+		private void Options_Click(object sender, EventArgs e)
 		{
 			OptionsForm formOptions = new OptionsForm();
 			formOptions.ShowDialog();
 		}
 
-		private void toolStripButtonSplitterViewBorder0_Click(object sender, EventArgs e)
+		private void SplitterViewBorder0_Click(object sender, EventArgs e)
 		{
 			toolStripButtonSplitViewBorder0.Checked = true;
 			toolStripButtonSplitViewBorder1.Checked = false;
@@ -160,7 +172,7 @@ namespace MijoCommander
 			splitContainer.BorderStyle = BorderStyle.None;
 		}
 
-		private void toolStripButtonSplitterViewBorder1_Click(object sender, EventArgs e)
+		private void SplitterViewBorder1_Click(object sender, EventArgs e)
 		{
 			toolStripButtonSplitViewBorder0.Checked = false;
 			toolStripButtonSplitViewBorder1.Checked = true;
@@ -174,7 +186,7 @@ namespace MijoCommander
 			splitContainer.BorderStyle = BorderStyle.FixedSingle;
 		}
 
-		private void toolStripButtonSplitterViewBorder2_Click(object sender, EventArgs e)
+		private void SplitterViewBorder2_Click(object sender, EventArgs e)
 		{
 			toolStripMenuItemSplitViewBorder0.Checked = false;
 			toolStripMenuItemSplitViewBorder1.Checked = false;
@@ -188,7 +200,7 @@ namespace MijoCommander
 			splitContainer.BorderStyle = BorderStyle.Fixed3D;
 		}
 
-		private void toolStripButtonSplitterViewLeftCollapse_Click(object sender, EventArgs e)
+		private void SplitterViewLeftCollapse_Click(object sender, EventArgs e)
 		{
 			toolStripMenuItemViewLeftCollapse.Checked = true;
 			toolStripMenuItemViewRightCollapse.Checked = false;
@@ -202,7 +214,7 @@ namespace MijoCommander
 			splitContainer.Panel1Collapsed = true;
 		}
 
-		private void toolStripButtonSplitterViewRightCollapse_Click(object sender, EventArgs e)
+		private void SplitterViewRightCollapse_Click(object sender, EventArgs e)
 		{
 			toolStripMenuItemViewLeftCollapse.Checked = false;
 			toolStripMenuItemViewRightCollapse.Checked = true;
@@ -216,7 +228,7 @@ namespace MijoCommander
 			splitContainer.Panel2Collapsed = true;
 		}
 
-		private void toolStripButtonSplitterViewNoCollapse_Click(object sender, EventArgs e)
+		private void SplitterViewNoCollapse_Click(object sender, EventArgs e)
 		{
 			toolStripMenuItemViewLeftCollapse.Checked = false;
 			toolStripMenuItemViewRightCollapse.Checked = false;
@@ -231,7 +243,7 @@ namespace MijoCommander
 			splitContainer.Panel2Collapsed = false;
 		}
 
-		private void toolStripButtonSplitterViewHorizontal_Click(object sender, EventArgs e)
+		private void SplitterViewHorizontal_Click(object sender, EventArgs e)
 		{
 			toolStripButtonSplitViewHorizontal.Checked = true;
 			toolStripButtonSplitViewVertical.Checked = false;
@@ -241,7 +253,7 @@ namespace MijoCommander
 			//splitContainer.SplitterDistance = ClientSize.Width / 2;
 		}
 
-		private void toolStripButtonSplitterViewVertical_Click(object sender, EventArgs e)
+		private void SplitterViewVertical_Click(object sender, EventArgs e)
 		{
 			toolStripButtonSplitViewHorizontal.Checked = false;
 			toolStripButtonSplitViewVertical.Checked = true;
@@ -251,51 +263,13 @@ namespace MijoCommander
 			//splitContainer.SplitterDistance = ClientSize.Height / 2;
 		}
 
-		private void toolStripMenuItemRemoveBar_Click(object sender, EventArgs e)
+		private void RemoveBarSplitView_Click(object sender, EventArgs e)
 		{
 			toolStripSplitView.Visible = false;
 			toolStripMenuItemToolbarSplitView.Checked = false;
 		}
 
-		private void toolStripMenuItemExit_Click(object sender, EventArgs e)
-		{
-			Close();
-		}
-
-		private void splitContainer_SplitterMoving(object sender, SplitterCancelEventArgs e)
-		{
-			if (splitContainer.Orientation == Orientation.Vertical)
-			{
-				splitContainer.Cursor = Cursors.VSplit;
-			}
-			else
-			{
-				splitContainer.Cursor = Cursors.HSplit;
-			}
-		}
-
-		private void splitContainer_SplitterMoved(object sender, SplitterEventArgs e)
-		{
-			splitContainer.Cursor = Cursors.Default;
-		}
-
-		private void listViewLeft_Enter(object sender, EventArgs e)
-		{
-		}
-
-		private void listViewLeft_Leave(object sender, EventArgs e)
-		{
-		}
-
-		private void listViewRight_Enter(object sender, EventArgs e)
-		{
-		}
-
-		private void listViewRight_Leave(object sender, EventArgs e)
-		{
-		}
-
-		private void toolStripMenuItemToolbarSplitView_Click(object sender, EventArgs e)
+		private void ToolbarSplitView_Click(object sender, EventArgs e)
 		{
 			if (toolStripSplitView.Visible)
 			{
@@ -307,7 +281,7 @@ namespace MijoCommander
 			}
 		}
 
-		private void toolStripButtonFileWindowGrid_Click(object sender, EventArgs e)
+		private void FileWindowGrid_Click(object sender, EventArgs e)
 		{
 			toolStripButtonFileWindowGrid.Checked = !toolStripButtonFileWindowGrid.Checked;
 			toolStripMenuItemViewFileWindowGrid.Checked = !toolStripMenuItemViewFileWindowGrid.Checked;
@@ -328,7 +302,7 @@ namespace MijoCommander
 			}
 		}
 
-		private void toolStripButtonFileWindowHeader_Click(object sender, EventArgs e)
+		private void FileWindowHeader_Click(object sender, EventArgs e)
 		{
 			toolStripButtonFileWindowHeader.Checked = !toolStripButtonFileWindowHeader.Checked;
 			toolStripMenuItemViewFileWindowHeader.Checked = !toolStripMenuItemViewFileWindowHeader.Checked;
@@ -345,7 +319,7 @@ namespace MijoCommander
 			}
 		}
 
-		private void toolStripButtonFileWindowFullRowSelect_Click(object sender, EventArgs e)
+		private void FileWindowFullRowSelect_Click(object sender, EventArgs e)
 		{
 			toolStripButtonFileWindowFullRowSelect.Checked = !toolStripButtonFileWindowFullRowSelect.Checked;
 			toolStripMenuItemViewFileWindowFullRow.Checked = !toolStripMenuItemViewFileWindowFullRow.Checked;
@@ -364,7 +338,7 @@ namespace MijoCommander
 			}
 		}
 
-		private void toolStripMenuItemFileWindow_Click(object sender, EventArgs e)
+		private void FileWindow_Click(object sender, EventArgs e)
 		{
 			if (toolStripFileWindow.Visible)
 			{
@@ -376,31 +350,22 @@ namespace MijoCommander
 			}
 		}
 
-		private void toolStripMenuItemFileWindowRemoveBar_Click(object sender, EventArgs e)
+		private void RemoveBarFileWindow_Click(object sender, EventArgs e)
 		{
 			toolStripFileWindow.Visible = false;
 			toolStripMenuItemFileWindow.Checked = false;
 		}
 
-		private void listViewLeft_SelectedIndexChanged(object sender, EventArgs e)
+		private void Exit_Click(object sender, EventArgs e)
 		{
-			if (listViewLeft.SelectedIndices.Count > 0)
-			{
-				int selectedIndex = listViewLeft.SelectedIndices[0];
-				toolStripStatusLabelInfo.Text = GetShortPath(fullPathLeft) + Path.DirectorySeparatorChar + listViewLeft.Items[selectedIndex].Text; 
-			}
+			Close();
 		}
 
-		private void listViewRight_SelectedIndexChanged(object sender, EventArgs e)
-		{
-			if (listViewRight.SelectedIndices.Count > 0)
-			{
-				int selectedIndex = listViewRight.SelectedIndices[0];
-				toolStripStatusLabelInfo.Text = GetShortPath(fullPathRight) + Path.DirectorySeparatorChar + listViewRight.Items[selectedIndex].Text;
-			}
-		}
+		#endregion
 
-		private void listViewLeft_DoubleClick(object sender, EventArgs e)
+		#region DoubleClick event handlers
+
+		private void ListViewLeft_DoubleClick(object sender, EventArgs e)
 		{
 			if (listViewLeft.SelectedIndices.Count > 0)
 			{
@@ -409,13 +374,13 @@ namespace MijoCommander
 				{
 					fullPathLeft = Directory.GetParent(fullPathLeft).ToString();
 					listViewLeft.Items.Clear();
-					ListLeftView();
+					UpdateListLeftView();
 				}
 				else if (Directory.Exists(Path.Combine(fullPathLeft, listViewLeft.SelectedItems[0].Text)))
 				{
 					fullPathLeft = Path.Combine(fullPathLeft, listViewLeft.SelectedItems[0].Text);
 					listViewLeft.Items.Clear();
-					ListLeftView();
+					UpdateListLeftView();
 				}
 				else
 				{
@@ -424,7 +389,7 @@ namespace MijoCommander
 			}
 		}
 
-		private void listViewRight_DoubleClick(object sender, EventArgs e)
+		private void ListViewRight_DoubleClick(object sender, EventArgs e)
 		{
 			if (listViewRight.SelectedIndices.Count > 0)
 			{
@@ -433,13 +398,13 @@ namespace MijoCommander
 				{
 					fullPathRight = Directory.GetParent(fullPathRight).ToString();
 					listViewRight.Items.Clear();
-					ListRightView();
+					UpdateListRightView();
 				}
 				else if (Directory.Exists(Path.Combine(fullPathRight, listViewRight.SelectedItems[0].Text)))
 				{
 					fullPathRight = Path.Combine(fullPathRight, listViewRight.SelectedItems[0].Text);
 					listViewRight.Items.Clear();
-					ListRightView();
+					UpdateListRightView();
 				}
 				else
 				{
@@ -447,5 +412,74 @@ namespace MijoCommander
 				}
 			}
 		}
+
+		#endregion
+
+		#region Splitter event handlers
+
+		private void SplitContainer_SplitterMoving(object sender, SplitterCancelEventArgs e)
+		{
+			if (splitContainer.Orientation == Orientation.Vertical)
+			{
+				splitContainer.Cursor = Cursors.VSplit;
+			}
+			else
+			{
+				splitContainer.Cursor = Cursors.HSplit;
+			}
+		}
+
+		private void SplitContainer_SplitterMoved(object sender, SplitterEventArgs e)
+		{
+			splitContainer.Cursor = Cursors.Default;
+		}
+
+		#endregion
+
+		#region Enter event handlers
+
+		private void ListViewLeft_Enter(object sender, EventArgs e)
+		{
+		}
+
+		private void ListViewRight_Enter(object sender, EventArgs e)
+		{
+		}
+
+		#endregion
+
+		#region Leave event handlers
+
+		private void ListViewLeft_Leave(object sender, EventArgs e)
+		{
+		}
+
+		private void ListViewRight_Leave(object sender, EventArgs e)
+		{
+		}
+
+		#endregion
+
+		#region SelectedIndexChanged even handlers
+
+		private void ListViewLeft_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			if (listViewLeft.SelectedIndices.Count > 0)
+			{
+				int selectedIndex = listViewLeft.SelectedIndices[0];
+				toolStripStatusLabelInfo.Text = GetShortPath(fullPathLeft) + Path.DirectorySeparatorChar + listViewLeft.Items[selectedIndex].Text;
+			}
+		}
+
+		private void ListViewRight_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			if (listViewRight.SelectedIndices.Count > 0)
+			{
+				int selectedIndex = listViewRight.SelectedIndices[0];
+				toolStripStatusLabelInfo.Text = GetShortPath(fullPathRight) + Path.DirectorySeparatorChar + listViewRight.Items[selectedIndex].Text;
+			}
+		}
+
+		#endregion
   }
 }

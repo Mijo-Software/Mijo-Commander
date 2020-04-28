@@ -152,7 +152,7 @@
 			this.toolStripMenuItemExit.Name = "toolStripMenuItemExit";
 			this.toolStripMenuItemExit.Size = new System.Drawing.Size(92, 22);
 			this.toolStripMenuItemExit.Text = "E&xit";
-			this.toolStripMenuItemExit.Click += new System.EventHandler(this.toolStripMenuItemExit_Click);
+			this.toolStripMenuItemExit.Click += new System.EventHandler(this.Exit_Click);
 			// 
 			// settingsToolStripMenuItem
 			// 
@@ -173,7 +173,7 @@
 			this.toolStripMenuItemSettingsOptions.Name = "toolStripMenuItemSettingsOptions";
 			this.toolStripMenuItemSettingsOptions.Size = new System.Drawing.Size(137, 22);
 			this.toolStripMenuItemSettingsOptions.Text = "&Options";
-			this.toolStripMenuItemSettingsOptions.Click += new System.EventHandler(this.toolStripButtonOptions_Click);
+			this.toolStripMenuItemSettingsOptions.Click += new System.EventHandler(this.Options_Click);
 			// 
 			// toolStripSeparatorSettings1
 			// 
@@ -267,7 +267,7 @@
 			this.toolStripMenuItemViewBorder0.Name = "toolStripMenuItemViewBorder0";
 			this.toolStripMenuItemViewBorder0.Size = new System.Drawing.Size(165, 22);
 			this.toolStripMenuItemViewBorder0.Text = "No border";
-			this.toolStripMenuItemViewBorder0.Click += new System.EventHandler(this.toolStripButtonSplitterViewBorder0_Click);
+			this.toolStripMenuItemViewBorder0.Click += new System.EventHandler(this.SplitterViewBorder0_Click);
 			// 
 			// toolStripMenuItemViewBorder1
 			// 
@@ -276,7 +276,7 @@
 			this.toolStripMenuItemViewBorder1.Name = "toolStripMenuItemViewBorder1";
 			this.toolStripMenuItemViewBorder1.Size = new System.Drawing.Size(165, 22);
 			this.toolStripMenuItemViewBorder1.Text = "Thin border";
-			this.toolStripMenuItemViewBorder1.Click += new System.EventHandler(this.toolStripButtonSplitterViewBorder1_Click);
+			this.toolStripMenuItemViewBorder1.Click += new System.EventHandler(this.SplitterViewBorder1_Click);
 			// 
 			// toolStripMenuItemViewBorder2
 			// 
@@ -285,7 +285,7 @@
 			this.toolStripMenuItemViewBorder2.Name = "toolStripMenuItemViewBorder2";
 			this.toolStripMenuItemViewBorder2.Size = new System.Drawing.Size(165, 22);
 			this.toolStripMenuItemViewBorder2.Text = "3d-border";
-			this.toolStripMenuItemViewBorder2.Click += new System.EventHandler(this.toolStripButtonSplitterViewBorder2_Click);
+			this.toolStripMenuItemViewBorder2.Click += new System.EventHandler(this.SplitterViewBorder2_Click);
 			// 
 			// toolStripSeparatorViewSplitView2
 			// 
@@ -329,7 +329,7 @@
 			this.toolStripMenuItemViewFileWindowGrid.Name = "toolStripMenuItemViewFileWindowGrid";
 			this.toolStripMenuItemViewFileWindowGrid.Size = new System.Drawing.Size(141, 22);
 			this.toolStripMenuItemViewFileWindowGrid.Text = "Show grid";
-			this.toolStripMenuItemViewFileWindowGrid.Click += new System.EventHandler(this.toolStripButtonFileWindowGrid_Click);
+			this.toolStripMenuItemViewFileWindowGrid.Click += new System.EventHandler(this.FileWindowGrid_Click);
 			// 
 			// toolStripMenuItemViewFileWindowHeader
 			// 
@@ -340,7 +340,7 @@
 			this.toolStripMenuItemViewFileWindowHeader.Name = "toolStripMenuItemViewFileWindowHeader";
 			this.toolStripMenuItemViewFileWindowHeader.Size = new System.Drawing.Size(141, 22);
 			this.toolStripMenuItemViewFileWindowHeader.Text = "Show header";
-			this.toolStripMenuItemViewFileWindowHeader.Click += new System.EventHandler(this.toolStripButtonFileWindowHeader_Click);
+			this.toolStripMenuItemViewFileWindowHeader.Click += new System.EventHandler(this.FileWindowHeader_Click);
 			// 
 			// toolStripMenuItemViewFileWindowFullRow
 			// 
@@ -351,7 +351,7 @@
 			this.toolStripMenuItemViewFileWindowFullRow.Name = "toolStripMenuItemViewFileWindowFullRow";
 			this.toolStripMenuItemViewFileWindowFullRow.Size = new System.Drawing.Size(141, 22);
 			this.toolStripMenuItemViewFileWindowFullRow.Text = "Select full row";
-			this.toolStripMenuItemViewFileWindowFullRow.Click += new System.EventHandler(this.toolStripButtonFileWindowFullRowSelect_Click);
+			this.toolStripMenuItemViewFileWindowFullRow.Click += new System.EventHandler(this.FileWindowFullRowSelect_Click);
 			// 
 			// toolStripSeparatorView1
 			// 
@@ -378,7 +378,7 @@
 			this.toolStripMenuItemToolbarSplitView.Name = "toolStripMenuItemToolbarSplitView";
 			this.toolStripMenuItemToolbarSplitView.Size = new System.Drawing.Size(129, 22);
 			this.toolStripMenuItemToolbarSplitView.Text = "Split view";
-			this.toolStripMenuItemToolbarSplitView.Click += new System.EventHandler(this.toolStripMenuItemToolbarSplitView_Click);
+			this.toolStripMenuItemToolbarSplitView.Click += new System.EventHandler(this.ToolbarSplitView_Click);
 			// 
 			// toolStripMenuItemFileWindow
 			// 
@@ -389,7 +389,7 @@
 			this.toolStripMenuItemFileWindow.Name = "toolStripMenuItemFileWindow";
 			this.toolStripMenuItemFileWindow.Size = new System.Drawing.Size(129, 22);
 			this.toolStripMenuItemFileWindow.Text = "File window";
-			this.toolStripMenuItemFileWindow.Click += new System.EventHandler(this.toolStripMenuItemFileWindow_Click);
+			this.toolStripMenuItemFileWindow.Click += new System.EventHandler(this.FileWindow_Click);
 			// 
 			// toolStripOperations
 			// 
@@ -412,7 +412,7 @@
 			this.toolStripButtonOptions.Name = "toolStripButtonOptions";
 			this.toolStripButtonOptions.Size = new System.Drawing.Size(23, 22);
 			this.toolStripButtonOptions.Text = "Options";
-			this.toolStripButtonOptions.Click += new System.EventHandler(this.toolStripButtonOptions_Click);
+			this.toolStripButtonOptions.Click += new System.EventHandler(this.Options_Click);
 			// 
 			// statusStrip
 			// 
@@ -442,8 +442,8 @@
 			this.splitContainer.Size = new System.Drawing.Size(641, 395);
 			this.splitContainer.SplitterDistance = 316;
 			this.splitContainer.TabIndex = 0;
-			this.splitContainer.SplitterMoving += new System.Windows.Forms.SplitterCancelEventHandler(this.splitContainer_SplitterMoving);
-			this.splitContainer.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitContainer_SplitterMoved);
+			this.splitContainer.SplitterMoving += new System.Windows.Forms.SplitterCancelEventHandler(this.SplitContainer_SplitterMoving);
+			this.splitContainer.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.SplitContainer_SplitterMoved);
 			// 
 			// listViewLeft
 			// 
@@ -463,10 +463,10 @@
 			this.listViewLeft.TabIndex = 1;
 			this.listViewLeft.UseCompatibleStateImageBehavior = false;
 			this.listViewLeft.View = System.Windows.Forms.View.Details;
-			this.listViewLeft.SelectedIndexChanged += new System.EventHandler(this.listViewLeft_SelectedIndexChanged);
-			this.listViewLeft.DoubleClick += new System.EventHandler(this.listViewLeft_DoubleClick);
-			this.listViewLeft.Enter += new System.EventHandler(this.listViewLeft_Enter);
-			this.listViewLeft.Leave += new System.EventHandler(this.listViewLeft_Leave);
+			this.listViewLeft.SelectedIndexChanged += new System.EventHandler(this.ListViewLeft_SelectedIndexChanged);
+			this.listViewLeft.DoubleClick += new System.EventHandler(this.ListViewLeft_DoubleClick);
+			this.listViewLeft.Enter += new System.EventHandler(this.ListViewLeft_Enter);
+			this.listViewLeft.Leave += new System.EventHandler(this.ListViewLeft_Leave);
 			// 
 			// columnHeaderLeftName
 			// 
@@ -496,10 +496,10 @@
 			this.listViewRight.TabIndex = 2;
 			this.listViewRight.UseCompatibleStateImageBehavior = false;
 			this.listViewRight.View = System.Windows.Forms.View.Details;
-			this.listViewRight.SelectedIndexChanged += new System.EventHandler(this.listViewRight_SelectedIndexChanged);
-			this.listViewRight.DoubleClick += new System.EventHandler(this.listViewRight_DoubleClick);
-			this.listViewRight.Enter += new System.EventHandler(this.listViewRight_Enter);
-			this.listViewRight.Leave += new System.EventHandler(this.listViewRight_Leave);
+			this.listViewRight.SelectedIndexChanged += new System.EventHandler(this.ListViewRight_SelectedIndexChanged);
+			this.listViewRight.DoubleClick += new System.EventHandler(this.ListViewRight_DoubleClick);
+			this.listViewRight.Enter += new System.EventHandler(this.ListViewRight_Enter);
+			this.listViewRight.Leave += new System.EventHandler(this.ListViewRight_Leave);
 			// 
 			// columnHeaderRightName
 			// 
@@ -584,7 +584,7 @@
 			this.toolStripMenuItemSplitViewRemoveBar.Name = "toolStripMenuItemSplitViewRemoveBar";
 			this.toolStripMenuItemSplitViewRemoveBar.Size = new System.Drawing.Size(165, 22);
 			this.toolStripMenuItemSplitViewRemoveBar.Text = "Remove the bar";
-			this.toolStripMenuItemSplitViewRemoveBar.Click += new System.EventHandler(this.toolStripMenuItemRemoveBar_Click);
+			this.toolStripMenuItemSplitViewRemoveBar.Click += new System.EventHandler(this.RemoveBarSplitView_Click);
 			// 
 			// toolStripSeparatorSplitViewContext1
 			// 
@@ -597,7 +597,7 @@
 			this.toolStripMenuItemSplitViewLeftCollapse.Name = "toolStripMenuItemSplitViewLeftCollapse";
 			this.toolStripMenuItemSplitViewLeftCollapse.Size = new System.Drawing.Size(165, 22);
 			this.toolStripMenuItemSplitViewLeftCollapse.Text = "Left view collapse";
-			this.toolStripMenuItemSplitViewLeftCollapse.Click += new System.EventHandler(this.toolStripButtonSplitterViewLeftCollapse_Click);
+			this.toolStripMenuItemSplitViewLeftCollapse.Click += new System.EventHandler(this.SplitterViewLeftCollapse_Click);
 			// 
 			// toolStripMenuItemSplitViewRightCollapse
 			// 
@@ -605,7 +605,7 @@
 			this.toolStripMenuItemSplitViewRightCollapse.Name = "toolStripMenuItemSplitViewRightCollapse";
 			this.toolStripMenuItemSplitViewRightCollapse.Size = new System.Drawing.Size(165, 22);
 			this.toolStripMenuItemSplitViewRightCollapse.Text = "Right view collapse";
-			this.toolStripMenuItemSplitViewRightCollapse.Click += new System.EventHandler(this.toolStripButtonSplitterViewRightCollapse_Click);
+			this.toolStripMenuItemSplitViewRightCollapse.Click += new System.EventHandler(this.SplitterViewRightCollapse_Click);
 			// 
 			// toolStripMenuItemSplitViewNoCollapse
 			// 
@@ -615,7 +615,7 @@
 			this.toolStripMenuItemSplitViewNoCollapse.Name = "toolStripMenuItemSplitViewNoCollapse";
 			this.toolStripMenuItemSplitViewNoCollapse.Size = new System.Drawing.Size(165, 22);
 			this.toolStripMenuItemSplitViewNoCollapse.Text = "No collapse";
-			this.toolStripMenuItemSplitViewNoCollapse.Click += new System.EventHandler(this.toolStripButtonSplitterViewNoCollapse_Click);
+			this.toolStripMenuItemSplitViewNoCollapse.Click += new System.EventHandler(this.SplitterViewNoCollapse_Click);
 			// 
 			// toolStripSeparatorSplitViewContext2
 			// 
@@ -630,7 +630,7 @@
 			this.toolStripMenuItemSplitViewBorder0.Name = "toolStripMenuItemSplitViewBorder0";
 			this.toolStripMenuItemSplitViewBorder0.Size = new System.Drawing.Size(165, 22);
 			this.toolStripMenuItemSplitViewBorder0.Text = "No border";
-			this.toolStripMenuItemSplitViewBorder0.Click += new System.EventHandler(this.toolStripButtonSplitterViewBorder0_Click);
+			this.toolStripMenuItemSplitViewBorder0.Click += new System.EventHandler(this.SplitterViewBorder0_Click);
 			// 
 			// toolStripMenuItemSplitViewBorder1
 			// 
@@ -638,7 +638,7 @@
 			this.toolStripMenuItemSplitViewBorder1.Name = "toolStripMenuItemSplitViewBorder1";
 			this.toolStripMenuItemSplitViewBorder1.Size = new System.Drawing.Size(165, 22);
 			this.toolStripMenuItemSplitViewBorder1.Text = "Thin border";
-			this.toolStripMenuItemSplitViewBorder1.Click += new System.EventHandler(this.toolStripButtonSplitterViewBorder1_Click);
+			this.toolStripMenuItemSplitViewBorder1.Click += new System.EventHandler(this.SplitterViewBorder1_Click);
 			// 
 			// toolStripMenuItemSplitViewBorder2
 			// 
@@ -646,7 +646,7 @@
 			this.toolStripMenuItemSplitViewBorder2.Name = "toolStripMenuItemSplitViewBorder2";
 			this.toolStripMenuItemSplitViewBorder2.Size = new System.Drawing.Size(165, 22);
 			this.toolStripMenuItemSplitViewBorder2.Text = "3d-border";
-			this.toolStripMenuItemSplitViewBorder2.Click += new System.EventHandler(this.toolStripButtonSplitterViewBorder2_Click);
+			this.toolStripMenuItemSplitViewBorder2.Click += new System.EventHandler(this.SplitterViewBorder2_Click);
 			// 
 			// toolStripSeparatorSplitViewContext3
 			// 
@@ -661,7 +661,7 @@
 			this.toolStripMenuItemSplitViewHorizontal.Name = "toolStripMenuItemSplitViewHorizontal";
 			this.toolStripMenuItemSplitViewHorizontal.Size = new System.Drawing.Size(165, 22);
 			this.toolStripMenuItemSplitViewHorizontal.Text = "Horizontal";
-			this.toolStripMenuItemSplitViewHorizontal.Click += new System.EventHandler(this.toolStripButtonSplitterViewHorizontal_Click);
+			this.toolStripMenuItemSplitViewHorizontal.Click += new System.EventHandler(this.SplitterViewHorizontal_Click);
 			// 
 			// toolStripMenuItemSplitViewVertical
 			// 
@@ -669,7 +669,7 @@
 			this.toolStripMenuItemSplitViewVertical.Name = "toolStripMenuItemSplitViewVertical";
 			this.toolStripMenuItemSplitViewVertical.Size = new System.Drawing.Size(165, 22);
 			this.toolStripMenuItemSplitViewVertical.Text = "Vertical";
-			this.toolStripMenuItemSplitViewVertical.Click += new System.EventHandler(this.toolStripButtonSplitterViewVertical_Click);
+			this.toolStripMenuItemSplitViewVertical.Click += new System.EventHandler(this.SplitterViewVertical_Click);
 			// 
 			// toolStripButtonSplitViewLeftCollapse
 			// 
@@ -679,7 +679,7 @@
 			this.toolStripButtonSplitViewLeftCollapse.Name = "toolStripButtonSplitViewLeftCollapse";
 			this.toolStripButtonSplitViewLeftCollapse.Size = new System.Drawing.Size(23, 22);
 			this.toolStripButtonSplitViewLeftCollapse.Text = "1";
-			this.toolStripButtonSplitViewLeftCollapse.Click += new System.EventHandler(this.toolStripButtonSplitterViewLeftCollapse_Click);
+			this.toolStripButtonSplitViewLeftCollapse.Click += new System.EventHandler(this.SplitterViewLeftCollapse_Click);
 			// 
 			// toolStripButtonSplitViewRightCollapse
 			// 
@@ -689,7 +689,7 @@
 			this.toolStripButtonSplitViewRightCollapse.Name = "toolStripButtonSplitViewRightCollapse";
 			this.toolStripButtonSplitViewRightCollapse.Size = new System.Drawing.Size(23, 22);
 			this.toolStripButtonSplitViewRightCollapse.Text = "2";
-			this.toolStripButtonSplitViewRightCollapse.Click += new System.EventHandler(this.toolStripButtonSplitterViewRightCollapse_Click);
+			this.toolStripButtonSplitViewRightCollapse.Click += new System.EventHandler(this.SplitterViewRightCollapse_Click);
 			// 
 			// toolStripButtonSplitViewNoCollapse
 			// 
@@ -701,7 +701,7 @@
 			this.toolStripButtonSplitViewNoCollapse.Name = "toolStripButtonSplitViewNoCollapse";
 			this.toolStripButtonSplitViewNoCollapse.Size = new System.Drawing.Size(23, 22);
 			this.toolStripButtonSplitViewNoCollapse.Text = "3";
-			this.toolStripButtonSplitViewNoCollapse.Click += new System.EventHandler(this.toolStripButtonSplitterViewNoCollapse_Click);
+			this.toolStripButtonSplitViewNoCollapse.Click += new System.EventHandler(this.SplitterViewNoCollapse_Click);
 			// 
 			// toolStripSeparatorSplitView1
 			// 
@@ -718,7 +718,7 @@
 			this.toolStripButtonSplitViewBorder0.Name = "toolStripButtonSplitViewBorder0";
 			this.toolStripButtonSplitViewBorder0.Size = new System.Drawing.Size(23, 22);
 			this.toolStripButtonSplitViewBorder0.Text = "None border";
-			this.toolStripButtonSplitViewBorder0.Click += new System.EventHandler(this.toolStripButtonSplitterViewBorder0_Click);
+			this.toolStripButtonSplitViewBorder0.Click += new System.EventHandler(this.SplitterViewBorder0_Click);
 			// 
 			// toolStripButtonSplitViewBorder1
 			// 
@@ -728,7 +728,7 @@
 			this.toolStripButtonSplitViewBorder1.Name = "toolStripButtonSplitViewBorder1";
 			this.toolStripButtonSplitViewBorder1.Size = new System.Drawing.Size(23, 22);
 			this.toolStripButtonSplitViewBorder1.Text = "Thin border";
-			this.toolStripButtonSplitViewBorder1.Click += new System.EventHandler(this.toolStripButtonSplitterViewBorder1_Click);
+			this.toolStripButtonSplitViewBorder1.Click += new System.EventHandler(this.SplitterViewBorder1_Click);
 			// 
 			// toolStripButtonSplitViewBorder2
 			// 
@@ -738,7 +738,7 @@
 			this.toolStripButtonSplitViewBorder2.Name = "toolStripButtonSplitViewBorder2";
 			this.toolStripButtonSplitViewBorder2.Size = new System.Drawing.Size(23, 22);
 			this.toolStripButtonSplitViewBorder2.Text = "3d border";
-			this.toolStripButtonSplitViewBorder2.Click += new System.EventHandler(this.toolStripButtonSplitterViewBorder2_Click);
+			this.toolStripButtonSplitViewBorder2.Click += new System.EventHandler(this.SplitterViewBorder2_Click);
 			// 
 			// toolStripSeparatorSplitView2
 			// 
@@ -755,7 +755,7 @@
 			this.toolStripButtonSplitViewHorizontal.Name = "toolStripButtonSplitViewHorizontal";
 			this.toolStripButtonSplitViewHorizontal.Size = new System.Drawing.Size(23, 22);
 			this.toolStripButtonSplitViewHorizontal.Text = "Horizontal";
-			this.toolStripButtonSplitViewHorizontal.Click += new System.EventHandler(this.toolStripButtonSplitterViewHorizontal_Click);
+			this.toolStripButtonSplitViewHorizontal.Click += new System.EventHandler(this.SplitterViewHorizontal_Click);
 			// 
 			// toolStripButtonSplitViewVertical
 			// 
@@ -765,7 +765,7 @@
 			this.toolStripButtonSplitViewVertical.Name = "toolStripButtonSplitViewVertical";
 			this.toolStripButtonSplitViewVertical.Size = new System.Drawing.Size(23, 22);
 			this.toolStripButtonSplitViewVertical.Text = "Vertical";
-			this.toolStripButtonSplitViewVertical.Click += new System.EventHandler(this.toolStripButtonSplitterViewVertical_Click);
+			this.toolStripButtonSplitViewVertical.Click += new System.EventHandler(this.SplitterViewVertical_Click);
 			// 
 			// toolStripFileWindow
 			// 
@@ -802,7 +802,7 @@
 			this.toolStripMenuItemFileWindowRemoveBar.Name = "toolStripMenuItemFileWindowRemoveBar";
 			this.toolStripMenuItemFileWindowRemoveBar.Size = new System.Drawing.Size(151, 22);
 			this.toolStripMenuItemFileWindowRemoveBar.Text = "Remove the bar";
-			this.toolStripMenuItemFileWindowRemoveBar.Click += new System.EventHandler(this.toolStripMenuItemFileWindowRemoveBar_Click);
+			this.toolStripMenuItemFileWindowRemoveBar.Click += new System.EventHandler(this.RemoveBarFileWindow_Click);
 			// 
 			// toolStripSeparatorSplitView
 			// 
@@ -816,7 +816,7 @@
 			this.toolStripMenuItemFileWindowGrid.Name = "toolStripMenuItemFileWindowGrid";
 			this.toolStripMenuItemFileWindowGrid.Size = new System.Drawing.Size(151, 22);
 			this.toolStripMenuItemFileWindowGrid.Text = "Show grid";
-			this.toolStripMenuItemFileWindowGrid.Click += new System.EventHandler(this.toolStripButtonFileWindowGrid_Click);
+			this.toolStripMenuItemFileWindowGrid.Click += new System.EventHandler(this.FileWindowGrid_Click);
 			// 
 			// toolStripMenuItemFileWindowHeader
 			// 
@@ -827,7 +827,7 @@
 			this.toolStripMenuItemFileWindowHeader.Name = "toolStripMenuItemFileWindowHeader";
 			this.toolStripMenuItemFileWindowHeader.Size = new System.Drawing.Size(151, 22);
 			this.toolStripMenuItemFileWindowHeader.Text = "Show header";
-			this.toolStripMenuItemFileWindowHeader.Click += new System.EventHandler(this.toolStripButtonFileWindowHeader_Click);
+			this.toolStripMenuItemFileWindowHeader.Click += new System.EventHandler(this.FileWindowHeader_Click);
 			// 
 			// toolStripMenuItemFileWindowFullRow
 			// 
@@ -838,7 +838,7 @@
 			this.toolStripMenuItemFileWindowFullRow.Name = "toolStripMenuItemFileWindowFullRow";
 			this.toolStripMenuItemFileWindowFullRow.Size = new System.Drawing.Size(151, 22);
 			this.toolStripMenuItemFileWindowFullRow.Text = "Select full row";
-			this.toolStripMenuItemFileWindowFullRow.Click += new System.EventHandler(this.toolStripButtonFileWindowFullRowSelect_Click);
+			this.toolStripMenuItemFileWindowFullRow.Click += new System.EventHandler(this.FileWindowFullRowSelect_Click);
 			// 
 			// toolStripButtonFileWindowGrid
 			// 
@@ -848,7 +848,7 @@
 			this.toolStripButtonFileWindowGrid.Name = "toolStripButtonFileWindowGrid";
 			this.toolStripButtonFileWindowGrid.Size = new System.Drawing.Size(23, 22);
 			this.toolStripButtonFileWindowGrid.Text = "Grid enabled";
-			this.toolStripButtonFileWindowGrid.Click += new System.EventHandler(this.toolStripButtonFileWindowGrid_Click);
+			this.toolStripButtonFileWindowGrid.Click += new System.EventHandler(this.FileWindowGrid_Click);
 			// 
 			// toolStripButtonFileWindowHeader
 			// 
@@ -860,7 +860,7 @@
 			this.toolStripButtonFileWindowHeader.Name = "toolStripButtonFileWindowHeader";
 			this.toolStripButtonFileWindowHeader.Size = new System.Drawing.Size(23, 22);
 			this.toolStripButtonFileWindowHeader.Text = "Header enabled";
-			this.toolStripButtonFileWindowHeader.Click += new System.EventHandler(this.toolStripButtonFileWindowHeader_Click);
+			this.toolStripButtonFileWindowHeader.Click += new System.EventHandler(this.FileWindowHeader_Click);
 			// 
 			// toolStripButtonFileWindowFullRowSelect
 			// 
@@ -872,7 +872,7 @@
 			this.toolStripButtonFileWindowFullRowSelect.Name = "toolStripButtonFileWindowFullRowSelect";
 			this.toolStripButtonFileWindowFullRowSelect.Size = new System.Drawing.Size(23, 22);
 			this.toolStripButtonFileWindowFullRowSelect.Text = "Full row select";
-			this.toolStripButtonFileWindowFullRowSelect.Click += new System.EventHandler(this.toolStripButtonFileWindowFullRowSelect_Click);
+			this.toolStripButtonFileWindowFullRowSelect.Click += new System.EventHandler(this.FileWindowFullRowSelect_Click);
 			// 
 			// toolStripStatusLabelInfo
 			// 
