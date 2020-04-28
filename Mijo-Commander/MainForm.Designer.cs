@@ -463,8 +463,8 @@
 			this.listViewLeft.TabIndex = 1;
 			this.listViewLeft.UseCompatibleStateImageBehavior = false;
 			this.listViewLeft.View = System.Windows.Forms.View.Details;
-			this.listViewLeft.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listViewLeft_ItemSelectionChanged);
 			this.listViewLeft.SelectedIndexChanged += new System.EventHandler(this.listViewLeft_SelectedIndexChanged);
+			this.listViewLeft.DoubleClick += new System.EventHandler(this.listViewLeft_DoubleClick);
 			this.listViewLeft.Enter += new System.EventHandler(this.listViewLeft_Enter);
 			this.listViewLeft.Leave += new System.EventHandler(this.listViewLeft_Leave);
 			// 
@@ -496,6 +496,8 @@
 			this.listViewRight.TabIndex = 2;
 			this.listViewRight.UseCompatibleStateImageBehavior = false;
 			this.listViewRight.View = System.Windows.Forms.View.Details;
+			this.listViewRight.SelectedIndexChanged += new System.EventHandler(this.listViewRight_SelectedIndexChanged);
+			this.listViewRight.DoubleClick += new System.EventHandler(this.listViewRight_DoubleClick);
 			this.listViewRight.Enter += new System.EventHandler(this.listViewRight_Enter);
 			this.listViewRight.Leave += new System.EventHandler(this.listViewRight_Leave);
 			// 

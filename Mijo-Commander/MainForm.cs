@@ -1,10 +1,9 @@
 ﻿using System;
 using System.IO;
 using System.Runtime.InteropServices;
-using System.Windows.Forms;
-using MijoCommander;
-using MijoCommander.Properties;
 using System.Text;
+using System.Windows.Forms;
+using MijoCommander.Properties;
 
 namespace MijoCommander
 {
@@ -30,29 +29,12 @@ namespace MijoCommander
 			InitializeComponent();
     }
 
-		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1300:SpecifyMessageBoxOptions")]
-    private void MainForm_Load(object sender, EventArgs e)
-    {
-			toolStripStatusLabelInfo.Text = "";
-			// avoid flicking on listviews
-			listViewLeft
-				.GetType()
-				.GetProperty("DoubleBuffered", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic)
-				.SetValue(listViewLeft, true, null);
-			listViewRight
-				.GetType()
-				.GetProperty("DoubleBuffered", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic)
-				.SetValue(listViewRight, true, null);
-			// get current directory
-			fullPathLeft = Directory.GetCurrentDirectory();
-			fullPathRight = Directory.GetCurrentDirectory();
-
+		private void ListLeftView()
+		{
 			if (Directory.Exists(".."))
 			{
 				listViewLeft.Items.Add("..");
-				listViewRight.Items.Add("..");
 			}
-
 			try
 			{
 				if (Directory.Exists(fullPathLeft))
@@ -65,6 +47,40 @@ namespace MijoCommander
 					{
 						listViewLeft.Items.Add(file.Name);
 					}
+				}
+				else
+				{
+					MessageBox.Show(
+						owner: this,
+						text: Resources.msgFolderNotExist,
+						caption: Resources.msgError,
+						buttons: MessageBoxButtons.OK,
+						icon: MessageBoxIcon.Error,
+						defaultButton: MessageBoxDefaultButton.Button1);
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(
+					owner: this,
+					text: ex.Message,
+					caption: Resources.msgError,
+					buttons: MessageBoxButtons.OK,
+					icon: MessageBoxIcon.Error,
+					defaultButton: MessageBoxDefaultButton.Button1);
+			}
+		}
+
+		private void ListRightView()
+		{
+			if (Directory.Exists(".."))
+			{
+				listViewRight.Items.Add("..");
+			}
+			try
+			{
+				if (Directory.Exists(fullPathRight))
+				{
 					foreach (DirectoryInfo directory in new DirectoryInfo(fullPathRight).GetDirectories())
 					{
 						listViewRight.Items.Add(directory.Name);
@@ -95,6 +111,30 @@ namespace MijoCommander
 					icon: MessageBoxIcon.Error,
 					defaultButton: MessageBoxDefaultButton.Button1);
 			}
+		}
+
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1300:SpecifyMessageBoxOptions")]
+    private void MainForm_Load(object sender, EventArgs e)
+    {
+			toolStripStatusLabelInfo.Text = "";
+			// avoid flicking on listviews
+			listViewLeft
+				.GetType()
+				.GetProperty("DoubleBuffered", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic)
+				.SetValue(listViewLeft, true, null);
+			listViewRight
+				.GetType()
+				.GetProperty("DoubleBuffered", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic)
+				.SetValue(listViewRight, true, null);
+			// get current directory
+			fullPathLeft = Directory.GetCurrentDirectory();
+			fullPathRight = Directory.GetCurrentDirectory();
+
+			ListLeftView();
+			ListRightView();
+
+			
+
 			splitterWidth = ClientSize.Width / 2;
 			splitterHeight = ClientSize.Height / 2;
 			splitContainer.SplitterDistance = ClientSize.Width / 2;
@@ -351,13 +391,61 @@ namespace MijoCommander
 			}
 		}
 
-		private void listViewLeft_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+		private void listViewRight_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			/*
-			ListView.SelectedListViewItemCollection listViewLeftItems = listViewLeft.SelectedItems;
-			ListViewItem item = listViewLeft.SelectedItems[0];// listViewLeftItems[0];
-			toolStripStatusLabelInfo.Text = GetShortPath(fullPathLeft) + Path.DirectorySeparatorChar + item.Text;
-			 * */
+			if (listViewRight.SelectedIndices.Count > 0)
+			{
+				int selectedIndex = listViewRight.SelectedIndices[0];
+				toolStripStatusLabelInfo.Text = GetShortPath(fullPathRight) + Path.DirectorySeparatorChar + listViewRight.Items[selectedIndex].Text;
+			}
+		}
+
+		private void listViewLeft_DoubleClick(object sender, EventArgs e)
+		{
+			if (listViewLeft.SelectedIndices.Count > 0)
+			{
+				int selectedIndex = listViewLeft.SelectedIndices[0];
+				if (listViewLeft.SelectedItems[0].Text == "..")
+				{
+					fullPathLeft = Directory.GetParent(fullPathLeft).ToString();
+					listViewLeft.Items.Clear();
+					ListLeftView();
+				}
+				else if (Directory.Exists(Path.Combine(fullPathLeft, listViewLeft.SelectedItems[0].Text)))
+				{
+					fullPathLeft = Path.Combine(fullPathLeft, listViewLeft.SelectedItems[0].Text);
+					listViewLeft.Items.Clear();
+					ListLeftView();
+				}
+				else
+				{
+					System.Diagnostics.Process.Start(Path.Combine(fullPathLeft, listViewLeft.SelectedItems[0].Text));
+				}
+			}
+		}
+
+		private void listViewRight_DoubleClick(object sender, EventArgs e)
+		{
+			if (listViewRight.SelectedIndices.Count > 0)
+			{
+				int selectedIndex = listViewRight.SelectedIndices[0];
+				if (listViewRight.SelectedItems[0].Text == "..")
+				{
+					fullPathRight = Directory.GetParent(fullPathRight).ToString();
+					listViewRight.Items.Clear();
+					ListRightView();
+				}
+				else if (Directory.Exists(Path.Combine(fullPathRight, listViewRight.SelectedItems[0].Text)))
+				{
+					fullPathRight = Path.Combine(fullPathRight, listViewRight.SelectedItems[0].Text);
+					listViewRight.Items.Clear();
+					ListRightView();
+				}
+				else
+				{
+					System.Diagnostics.Process.Start(Path.Combine(fullPathRight, listViewRight.SelectedItems[0].Text));
+				}
+			}
 		}
   }
 }
